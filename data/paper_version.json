@@ -1,0 +1,9 @@
+{
+  "title": "Benchmarking Agent Selection under Heterogeneous Objectives",
+  "revision": "progressive_agent_selection_narrative_20261111",
+  "scores_version": "complete_eight_model_cohort_20261110",
+  "pdf_sha256": "0b33cd62e7da102fceb4c1d4293292dbc8f2ed82270de47cbeaaf576540e2e35",
+  "models": 8,
+  "selector_package_records": 9440,
+  "release_checked_at_utc": "2026-11-11T08:56:51.137410+00:00"
+}

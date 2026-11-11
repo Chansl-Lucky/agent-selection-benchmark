@@ -1,0 +1,201 @@
+{
+  "version": 2,
+  "snapshot": "complete_eight_model_cohort_20261110",
+  "generated_date": "2026-11-11",
+  "source_paths_relative_to_repository": true,
+  "results_sha256": "8ee5c8612ce59dc7feb291e293333c4b87fcc44121ec2e0638c466aea1f38c96",
+  "export_policy": {
+    "allowlist_only": true,
+    "raw_traces": false,
+    "reference_answers": false,
+    "attachments": false,
+    "credentials": false,
+    "gaia_original_task_text": false,
+    "mind2web_original_task_text": false,
+    "gallery_descriptions": "Curated short paraphrases except restricted benchmarks, which use generic benchmark-level descriptions.",
+    "gallery_ground_truth": "Aggregate retrospective display, not active router input.",
+    "scicode_ground_truth": "Six native step facts for an explicitly labelled worked scoring example."
+  },
+  "paper": {
+    "title": "Benchmarking Agent Selection under Heterogeneous Objectives",
+    "revision": "heterogeneous_objectives_frontmatter_20261111",
+    "path": "paper_refine_20261108_v1/paper.pdf",
+    "pdf_sha256": "3dee96db4eee1b5ce1103eb48dc04a31f7c8b80ead1cf5e6bdd1a524b6050123"
+  },
+  "sources": {
+    "experiments/compact_benchmark_20261102/current_score_results.json": {
+      "sha256": "f59be96b0b1bbee036c189a61515dd150ddb668b797b2503a74d8303b01ae1ac",
+      "bytes": 1492
+    },
+    "current_paper.json": {
+      "sha256": "d6bcae2ee025c55b5186794c36ba7150356221831b4bf355ffd117741659f3b6",
+      "bytes": 1999
+    },
+    "experiments/compact_benchmark_20261102/ark_expansion_20261110/publication/summary.json": {
+      "sha256": "45d5b967c6c854a4ebd8bdfb6867565aca55fa5983e349504d812fa387dc2459",
+      "bytes": 94015
+    },
+    "experiments/compact_benchmark_20261102/ark_expansion_20261110/publication/evaluation_scope.json": {
+      "sha256": "dd36e3c9ab5b0b9438133d5ada1cbdbf5111b8a451ad77bfaa35a1adec1cd1b3",
+      "bytes": 16182
+    },
+    "experiments/compact_benchmark_20261102/framework_review_20261107/source_inventory.csv": {
+      "sha256": "732d48338581b0a3eb169718180a2bf37f4eaeaaf6acf934452e2a59c610c73a",
+      "bytes": 81747
+    },
+    "experiments/compact_benchmark_20261102/ark_expansion_20261110/publication/combined_results.jsonl": {
+      "sha256": "8ee5c8612ce59dc7feb291e293333c4b87fcc44121ec2e0638c466aea1f38c96",
+      "bytes": 24401677
+    },
+    "experiments/compact_benchmark_20261102/ark_expansion_20261110/publication/overall.csv": {
+      "sha256": "5b183f70535303bdf2f976e1472400c0371d3a523afa3a5ef91a78d68c877046",
+      "bytes": 3191
+    },
+    "experiments/compact_benchmark_20261102/ark_expansion_20261110/publication/by_benchmark.csv": {
+      "sha256": "8097e9141f0b8445b24c23adc8116beea5db128bb9e7963771057a387bf72d90",
+      "bytes": 22540
+    },
+    "experiments/compact_benchmark_20261102/ark_expansion_20261110/publication/complete_scores.csv": {
+      "sha256": "76a9afb933f6422f80651379cdfce1d476b1377040303a457007b4f693e77778",
+      "bytes": 1401
+    },
+    "experiments/compact_benchmark_20261102/private_scoring_catalog.json": {
+      "sha256": "113ea5acb5b9b2b6dc07336732cb101d7e4b0f78d3b8ac7dd3a988aaca8cfdbd",
+      "bytes": 284
+    },
+    "experiments/compact_benchmark_20261102/ground_truth_repair_20261105/private_catalog.json": {
+      "sha256": "adfee66fa4e287c2efdf6ca93d132a6b6756bb64fc26553439f1b21f04087250",
+      "bytes": 997059
+    },
+    "experiments/compact_benchmark_20261102/current_core_benchmark.json": {
+      "sha256": "557a9adca6e02a9cec7ef21039622d523d941aadf177c7dd68096a04122eb308",
+      "bytes": 1767
+    },
+    "experiments/compact_benchmark_20261102/core45_rerun_20261105/publication/core_private_catalog.json": {
+      "sha256": "35c7bf61faabed1001667d2a70a8a8dc8fa5ad91bcfffb47a4f838da8903673d",
+      "bytes": 88986
+    },
+    "experiments/harbor_package_repair_20261031/release/tasks/t0005/tests/ground_truth.json": {
+      "sha256": "6c1ceea220e907277c7820a18f642f6fc8fd3b7861ce344aa129b44690a3ed03",
+      "bytes": 2341462
+    },
+    "experiments/harbor_package_repair_20261031/release/tasks/t0011/tests/ground_truth.json": {
+      "sha256": "8182590ab3d336428ee2398e4b68aa74937518a9227e05e6ae2f26b7b6708400",
+      "bytes": 2341362
+    },
+    "experiments/compact_benchmark_20261102/core45_rerun_20261105/release/tasks/t0034/tests/ground_truth.json": {
+      "sha256": "e53337bc8bd2e48456e3a64bdf3ad009a1bed11c775dccb8995fce6bcee3d209",
+      "bytes": 6644070
+    },
+    "experiments/compact_benchmark_20261102/core45_rerun_20261105/release/tasks/t0035/tests/ground_truth.json": {
+      "sha256": "0d3bfb5b1a9d7c1aebf1b09cd696634df3d6b3efc85c7c61fc7b5f2d88a5d144",
+      "bytes": 6647351
+    },
+    "experiments/harbor_package_repair_20261031/release/tasks/t0079/tests/ground_truth.json": {
+      "sha256": "f10e505d6561ea731a05278a0083c443b3d50ee6f8c9b1e9841d18c103a977e4",
+      "bytes": 7086163
+    },
+    "experiments/harbor_package_repair_20261031/release/tasks/t0083/tests/ground_truth.json": {
+      "sha256": "e72bdfa4c6a55bbb79537423c462636521f4dbadb0d277553c485a673ad8fc88",
+      "bytes": 7090679
+    },
+    "experiments/harbor_package_repair_20261031/release/tasks/t0244/tests/ground_truth.json": {
+      "sha256": "660f694ecef1a4f806a6f5a84dbeb541e003b692a64ade08a49de089d9dd711d",
+      "bytes": 6544077
+    },
+    "experiments/compact_benchmark_20261102/ground_truth_repair_20261105/private_tasks/t0245/tests/ground_truth.json": {
+      "sha256": "dfbd82dfbd22f10ae5a356ea51f1d3cddfead0246d1cfd0b6b209979fdcbe1ce",
+      "bytes": 4871185
+    },
+    "experiments/harbor_package_repair_20261031/release/tasks/t0547/tests/ground_truth.json": {
+      "sha256": "7c439bebe90142de88c668c7fdcb963daa59fe6d0ab3c643cb272ba8065d3252",
+      "bytes": 5129640
+    },
+    "experiments/harbor_package_repair_20261031/release/tasks/t1167/tests/ground_truth.json": {
+      "sha256": "49fb0ac6730ce4156095cf22b143df8db9ae52b97039413d39dc462f60c4d19a",
+      "bytes": 2287754
+    },
+    "experiments/harbor_package_repair_20261031/release/tasks/t0611/tests/ground_truth.json": {
+      "sha256": "fcd2f8a6723199454a87609f8a603a618213d4795e7dff7a72308949424ffddc",
+      "bytes": 4105986
+    },
+    "experiments/harbor_package_repair_20261031/release/tasks/t0617/tests/ground_truth.json": {
+      "sha256": "473f91fedbff14c9313af650c32f0cabe7a1f468fea4ba9321c35eda32a45e4d",
+      "bytes": 4098580
+    },
+    "experiments/harbor_package_repair_20261031/release/tasks/t0711/tests/ground_truth.json": {
+      "sha256": "b747196ca17b3dfd997b306df1a2610b9b13c40db8ca82ec79146f14ab6d22c7",
+      "bytes": 5174929
+    },
+    "experiments/compact_benchmark_20261102/ground_truth_repair_20261105/private_tasks/t0713/tests/ground_truth.json": {
+      "sha256": "f5e6eb0de40dfd97f38df779a4ebde260b3ac4bd71bed1283c155d702ee01c6c",
+      "bytes": 3837792
+    },
+    "experiments/harbor_package_repair_20261031/release/tasks/t0761/tests/ground_truth.json": {
+      "sha256": "81fa72337aa042c477f71ced79558417a709f55f76dca4237e279e84d4411ef9",
+      "bytes": 3978978
+    },
+    "experiments/harbor_package_repair_20261031/release/tasks/t0763/tests/ground_truth.json": {
+      "sha256": "baeef8b144027b370f0ec084af2895751b79ed798a27c740d7dd05acdf21934d",
+      "bytes": 3990008
+    },
+    "experiments/harbor_package_repair_20261031/release/tasks/t0811/tests/ground_truth.json": {
+      "sha256": "88026fbe04d7293ee7b2d83e992ce1d51618616caa8934d462941498c7f3d9ea",
+      "bytes": 2981290
+    },
+    "experiments/harbor_package_repair_20261031/release/tasks/t0814/tests/ground_truth.json": {
+      "sha256": "948cc1143053dfbfac39de1d0711a4aef4e579ba2c4539e862eb6cc586c401f2",
+      "bytes": 3000107
+    },
+    "experiments/harbor_package_repair_20261031/release/tasks/t1167/environment/public/brief.json": {
+      "sha256": "91fd5604046e557a52c0c7ecd3ff28ebd6ec0ca028e994d4c4c4703e7a65371b",
+      "bytes": 81237
+    },
+    "experiments/compact_benchmark_20261102/history_cards_run_20261102/release/tasks/t1167/history_cards.json": {
+      "sha256": "9bcfeb36d0096b3fb950733327563240a07e9f577f37b6f4deef35889a70e7f6",
+      "bytes": 10704
+    },
+    "experiments/compact_benchmark_20261102/history_cards_run_20261102/release/tasks/t1167/history_summary.json": {
+      "sha256": "122cd445bcec9c05488aed8c3de211cb3f72d164b61195da0669af2305cb24ff",
+      "bytes": 92787
+    },
+    "experiments/compact_benchmark_20261102/history_cards_run_20261102/release/tasks/t1167/qualification_exact.json": {
+      "sha256": "b0958ded0fb9060360fe18fb60bb584d65d401a72ba4549cce094e9c60e7601c",
+      "bytes": 14171
+    },
+    "experiments/compact_benchmark_20261102/history_cards_run_20261102/release/tasks/t1167/source_aliases.json": {
+      "sha256": "f9e1afcfdb20465a6e463233626d30a5d58b7128a85f029eb24c0c42d00e47cd",
+      "bytes": 70522
+    },
+    "paper_refine_20261108_v1/data/objective_analysis/switching_summary.json": {
+      "sha256": "b9e86aea7b031385e79c81c0918829d7812aab6d6f5369c48ee39c6138cba1b0",
+      "bytes": 34628
+    },
+    "paper_refine_20261108_v1/data/objective_analysis/monotonicity_summary.json": {
+      "sha256": "abc56ebfcb926b431d50864529b369018620d51e6fae46eb90142fd181feae6c",
+      "bytes": 43534
+    },
+    "paper_refine_20261108_v1/data/user_requirements/summary.json": {
+      "sha256": "e03b5ce494fcff645208c94664c763a9c47eed2443c135946cd951908fdb894f",
+      "bytes": 31944
+    },
+    "paper_refine_20261108_v1/figure_redesign_20261110/budget/budget_condition_scores.csv": {
+      "sha256": "e9b6087c72fbfa4b7fc1a580f64b3e650ef4863b6f26c8cf92c6712c042dea3f",
+      "bytes": 29324
+    },
+    "paper_refine_20261108_v1/figure_redesign_20261110/budget/deadline_condition_scores.csv": {
+      "sha256": "f1afcd0de42df7ed57e041f6171db08a7b6394f0e8826a913407c1acff721576",
+      "bytes": 29982
+    }
+  },
+  "checks": {
+    "formal_models": 8,
+    "score_records": 80,
+    "selector_package_records": 9440,
+    "benchmark_count": 9,
+    "gallery_examples": 18,
+    "scicode_reference_native_verifier": "passed; zero=21/96, tools=4/96, oracle=22/96",
+    "scicode_history_folds_disjoint": true,
+    "new_api_calls": 0
+  }
+}

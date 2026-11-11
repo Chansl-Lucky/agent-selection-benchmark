@@ -1,0 +1,309 @@
+{
+  "task_id": "t1167",
+  "source_task_key": "scicode:66",
+  "title": "Kolmogorov–Crespi potential",
+  "description": "Compute the interlayer potential from the atomic coordinates of two layers. The archived runs contain native checks for six steps: graphene geometry, normal vectors, repulsion, attraction, tapering, and total potential energy.",
+  "mode": "retrospective_scoring_demonstration",
+  "not_router_visible_ground_truth": true,
+  "model": "openai/o3-2025-04-16",
+  "candidates": [
+    {
+      "id": "tools",
+      "service_id": "svc_4aac0c50f425",
+      "alias": "C1",
+      "model": "openai/o3-2025-04-16",
+      "harness": "Tool Calling"
+    },
+    {
+      "id": "zero",
+      "service_id": "svc_a629d1be2d17",
+      "alias": "C2",
+      "model": "openai/o3-2025-04-16",
+      "harness": "Zero Shot"
+    }
+  ],
+  "steps": [
+    {
+      "id": "66.1",
+      "name": "Generate monolayer graphene",
+      "name_en": "Generate monolayer graphene",
+      "contract_id": "native.step:66.1",
+      "candidates": {
+        "tools": {
+          "native_pass": false,
+          "native_status": "fail",
+          "cost_usd": 0.144498,
+          "duration_seconds": 115.205901
+        },
+        "zero": {
+          "native_pass": false,
+          "native_status": "fail",
+          "cost_usd": 0.028668,
+          "duration_seconds": 66.381688
+        }
+      }
+    },
+    {
+      "id": "66.2",
+      "name": "Assign normal vectors",
+      "name_en": "Assign normal vectors",
+      "contract_id": "native.step:66.2",
+      "candidates": {
+        "tools": {
+          "native_pass": true,
+          "native_status": "pass",
+          "cost_usd": 0.336558,
+          "duration_seconds": 261.894393
+        },
+        "zero": {
+          "native_pass": true,
+          "native_status": "pass",
+          "cost_usd": 0.044058,
+          "duration_seconds": 85.445399
+        }
+      }
+    },
+    {
+      "id": "66.3",
+      "name": "Compute repulsive potential",
+      "name_en": "Compute repulsive potential",
+      "contract_id": "native.step:66.3",
+      "candidates": {
+        "tools": {
+          "native_pass": true,
+          "native_status": "pass",
+          "cost_usd": 0.545216,
+          "duration_seconds": 410.537967
+        },
+        "zero": {
+          "native_pass": false,
+          "native_status": "fail",
+          "cost_usd": 0.062796,
+          "duration_seconds": 103.927914
+        }
+      }
+    },
+    {
+      "id": "66.4",
+      "name": "Compute attractive potential",
+      "name_en": "Compute attractive potential",
+      "contract_id": "native.step:66.4",
+      "candidates": {
+        "tools": {
+          "native_pass": true,
+          "native_status": "pass",
+          "cost_usd": 0.704666,
+          "duration_seconds": 487.602109
+        },
+        "zero": {
+          "native_pass": true,
+          "native_status": "pass",
+          "cost_usd": 0.073874,
+          "duration_seconds": 113.912689
+        }
+      }
+    },
+    {
+      "id": "66.5",
+      "name": "Compute taper function",
+      "name_en": "Compute taper function",
+      "contract_id": "native.step:66.5",
+      "candidates": {
+        "tools": {
+          "native_pass": true,
+          "native_status": "pass",
+          "cost_usd": 0.865124,
+          "duration_seconds": 542.371205
+        },
+        "zero": {
+          "native_pass": true,
+          "native_status": "pass",
+          "cost_usd": 0.086534,
+          "duration_seconds": 127.704763
+        }
+      }
+    },
+    {
+      "id": "66.6",
+      "name": "Compute total potential energy",
+      "name_en": "Compute total potential energy",
+      "contract_id": "native.step:66.6",
+      "candidates": {
+        "tools": {
+          "native_pass": false,
+          "native_status": "fail",
+          "cost_usd": 1.126208,
+          "duration_seconds": 689.628571
+        },
+        "zero": {
+          "native_pass": false,
+          "native_status": "fail",
+          "cost_usd": 0.115952,
+          "duration_seconds": 172.549594
+        }
+      }
+    }
+  ],
+  "budgets": [
+    {
+      "id": "B25",
+      "quantile": 0.25,
+      "value": 0.032796
+    },
+    {
+      "id": "B50",
+      "quantile": 0.5,
+      "value": 0.124134
+    },
+    {
+      "id": "B75",
+      "quantile": 0.75,
+      "value": 0.353276
+    },
+    {
+      "id": "B95",
+      "quantile": 0.95,
+      "value": 0.8439
+    }
+  ],
+  "deadlines": [
+    {
+      "id": "D25",
+      "quantile": 0.25,
+      "value": 42.961012
+    },
+    {
+      "id": "D50",
+      "quantile": 0.5,
+      "value": 108.038762
+    },
+    {
+      "id": "D75",
+      "quantile": 0.75,
+      "value": 248.759902
+    },
+    {
+      "id": "D95",
+      "quantile": 0.95,
+      "value": 592.041669
+    }
+  ],
+  "units": {
+    "cost_usd": "USD, cumulative estimated recorded cost",
+    "duration_seconds": "seconds, cumulative saved-output arrival"
+  },
+  "resource_scope": "saved_output_cumulative_prefix",
+  "requirements_source": "other four folds only; inverse weighted CDF P25/P50/P75/P95",
+  "held_out_fold": 3,
+  "history_folds": [
+    0,
+    1,
+    2,
+    4
+  ],
+  "history_task_count": 52,
+  "history_summary": [
+    {
+      "candidate": "tools",
+      "tasks": 52,
+      "native_pass": 4,
+      "native_fail": 48,
+      "native_unknown": 0
+    },
+    {
+      "candidate": "zero",
+      "tasks": 52,
+      "native_pass": 3,
+      "native_fail": 49,
+      "native_unknown": 0
+    }
+  ],
+  "history_cards": [
+    {
+      "source_task_key": "scicode:33",
+      "fold": 2,
+      "name": "Chern number parameter grid",
+      "description": "Sweep physical parameters to construct a grid of Chern numbers.",
+      "native_full": [
+        {
+          "candidate": "tools",
+          "native_status": "fail",
+          "cost_usd": 0.576552,
+          "duration_seconds": 297.321019
+        },
+        {
+          "candidate": "zero",
+          "native_status": "fail",
+          "cost_usd": 0.053426,
+          "duration_seconds": 41.146747
+        }
+      ]
+    },
+    {
+      "source_task_key": "scicode:60",
+      "fold": 0,
+      "name": "Monte Carlo simulation",
+      "description": "Simulate a particle system using Monte Carlo methods.",
+      "native_full": [
+        {
+          "candidate": "tools",
+          "native_status": "fail",
+          "cost_usd": 0.730426,
+          "duration_seconds": 457.167018
+        },
+        {
+          "candidate": "zero",
+          "native_status": "fail",
+          "cost_usd": 0.052418,
+          "duration_seconds": 37.73262
+        }
+      ]
+    }
+  ],
+  "submission_shape": {
+    "total_choices": 103,
+    "main_choices": 96,
+    "baseline_choices": 7,
+    "format": "{\"choices\":[\"C1\",\"C2\",...]}",
+    "candidate_aliases": {
+      "C1": "tools",
+      "C2": "zero"
+    }
+  },
+  "reference_scores": [
+    {
+      "strategy": "zero",
+      "q": 0.21875,
+      "e": 0.9545454545454546,
+      "qualified_cases": 21,
+      "main_cases": 96,
+      "feasible_cases": 22,
+      "baseline_q": 0.42857142857142855
+    },
+    {
+      "strategy": "tools",
+      "q": 0.041666666666666664,
+      "e": 0.06212048554997884,
+      "qualified_cases": 4,
+      "main_cases": 96,
+      "feasible_cases": 22,
+      "baseline_q": 0.5714285714285714
+    },
+    {
+      "strategy": "oracle",
+      "q": 0.22916666666666666,
+      "e": 1.0,
+      "qualified_cases": 22,
+      "main_cases": 96,
+      "feasible_cases": 22,
+      "baseline_q": 0.5714285714285714
+    }
+  ],
+  "reference_note": "Deterministic reference submissions, not model blind-test scores; oracle uses hidden target facts.",
+  "source": {
+    "ground_truth": "experiments/harbor_package_repair_20261031/release/tasks/t1167/tests/ground_truth.json",
+    "ground_truth_sha256": "49fb0ac6730ce4156095cf22b143df8db9ae52b97039413d39dc462f60c4d19a",
+    "public_history_cards": "experiments/compact_benchmark_20261102/history_cards_run_20261102/release/tasks/t1167/history_cards.json",
+    "verifier": "experiments/harbor_package_repair_20261031/release/tasks/t1167/tests/verify.py"
+  }
+}

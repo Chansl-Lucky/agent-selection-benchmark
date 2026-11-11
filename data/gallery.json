@@ -1,0 +1,689 @@
+{
+  "description": "Curated retrospective examples; not a representative performance sample. GAIA and Online-Mind2Web contain identifiers and aggregates only.",
+  "examples": [
+    {
+      "id": "t0005",
+      "task_id": "t0005",
+      "source_task_key": "assistantbench:3af8028c2a59e28ca88baff0e6d91f2a9f170c5ef91003f1c8406755a2760ad4",
+      "source_task_id": "3af8028c2a59e28ca88baff0e6d91f2a9f170c5ef91003f1c8406755a2760ad4",
+      "benchmark": "assistantbench",
+      "benchmark_name": "AssistantBench",
+      "category": "information",
+      "title": "Compare historical card prices",
+      "title_en": "Compare historical card prices",
+      "description": "Compare peak-to-low price declines for cards banned in the same announcement.",
+      "text_kind": "curated paraphrase",
+      "original_task_text_included": false,
+      "track": "hal",
+      "fold": 1,
+      "candidate_count": 15,
+      "native_pass_count": 1,
+      "native_fail_count": 14,
+      "contract_id": "native.full",
+      "resource_scope": "recorded_whole_task_duration",
+      "cost_usd": {
+        "min": 0.0090981,
+        "max": 6.692685,
+        "known_count": 15
+      },
+      "duration_seconds": {
+        "min": 10.428995,
+        "max": 514.460712,
+        "known_count": 15
+      },
+      "main_cases": 16,
+      "feasible_cases": 16,
+      "oracle_q": 1.0,
+      "source": {
+        "ground_truth": "experiments/harbor_package_repair_20261031/release/tasks/t0005/tests/ground_truth.json",
+        "sha256": "6c1ceea220e907277c7820a18f642f6fc8fd3b7861ce344aa129b44690a3ed03"
+      }
+    },
+    {
+      "id": "t0011",
+      "task_id": "t0011",
+      "source_task_key": "assistantbench:57d9dc6935e8a40b02e7f8ec81768fe70e68a0c05f6866927c9fda38db38a486",
+      "source_task_id": "57d9dc6935e8a40b02e7f8ec81768fe70e68a0c05f6866927c9fda38db38a486",
+      "benchmark": "assistantbench",
+      "benchmark_name": "AssistantBench",
+      "category": "information",
+      "title": "Annual passes or day tickets?",
+      "title_en": "Annual passes or day tickets?",
+      "description": "Compare museum admission costs using family members' ages and the number of visits per year.",
+      "text_kind": "curated paraphrase",
+      "original_task_text_included": false,
+      "track": "hal",
+      "fold": 2,
+      "candidate_count": 15,
+      "native_pass_count": 3,
+      "native_fail_count": 12,
+      "contract_id": "native.full",
+      "resource_scope": "recorded_whole_task_duration",
+      "cost_usd": {
+        "min": 0.0121627,
+        "max": 7.47984,
+        "known_count": 15
+      },
+      "duration_seconds": {
+        "min": 43.726334,
+        "max": 1156.284579,
+        "known_count": 15
+      },
+      "main_cases": 16,
+      "feasible_cases": 12,
+      "oracle_q": 0.75,
+      "source": {
+        "ground_truth": "experiments/harbor_package_repair_20261031/release/tasks/t0011/tests/ground_truth.json",
+        "sha256": "8182590ab3d336428ee2398e4b68aa74937518a9227e05e6ae2f26b7b6708400"
+      }
+    },
+    {
+      "id": "t0034",
+      "task_id": "t0034",
+      "source_task_key": "corebench_hard:capsule-0504157",
+      "source_task_id": "capsule-0504157",
+      "benchmark": "corebench_hard",
+      "benchmark_name": "CORE-Bench",
+      "category": "science",
+      "title": "Reproduce an R manuscript",
+      "title_en": "Reproduce an R manuscript",
+      "description": "Run and render an R Markdown manuscript, then report the requested results from its reproduced figures.",
+      "text_kind": "curated paraphrase",
+      "original_task_text_included": false,
+      "track": "hal",
+      "fold": 0,
+      "candidate_count": 45,
+      "native_pass_count": 15,
+      "native_fail_count": 30,
+      "contract_id": "native.full",
+      "resource_scope": "recorded_whole_task_duration",
+      "cost_usd": {
+        "min": 0.0121291,
+        "max": 19.725,
+        "known_count": 44
+      },
+      "duration_seconds": {
+        "min": 32.016316,
+        "max": 5672.819745,
+        "known_count": 44
+      },
+      "main_cases": 16,
+      "feasible_cases": 15,
+      "oracle_q": 0.9375,
+      "source": {
+        "ground_truth": "experiments/compact_benchmark_20261102/core45_rerun_20261105/release/tasks/t0034/tests/ground_truth.json",
+        "sha256": "e53337bc8bd2e48456e3a64bdf3ad009a1bed11c775dccb8995fce6bcee3d209"
+      }
+    },
+    {
+      "id": "t0035",
+      "task_id": "t0035",
+      "source_task_key": "corebench_hard:capsule-0851068",
+      "source_task_id": "capsule-0851068",
+      "benchmark": "corebench_hard",
+      "benchmark_name": "CORE-Bench",
+      "category": "science",
+      "title": "Reproduce a classification experiment",
+      "title_en": "Reproduce a classification experiment",
+      "description": "Run the supplied classification experiment and report its AUC after training.",
+      "text_kind": "curated paraphrase",
+      "original_task_text_included": false,
+      "track": "hal",
+      "fold": 3,
+      "candidate_count": 45,
+      "native_pass_count": 22,
+      "native_fail_count": 23,
+      "contract_id": "native.full",
+      "resource_scope": "recorded_whole_task_duration",
+      "cost_usd": {
+        "min": 0.0049737,
+        "max": 5.2305,
+        "known_count": 45
+      },
+      "duration_seconds": {
+        "min": 27.050797,
+        "max": 1716.187634,
+        "known_count": 45
+      },
+      "main_cases": 16,
+      "feasible_cases": 16,
+      "oracle_q": 1.0,
+      "source": {
+        "ground_truth": "experiments/compact_benchmark_20261102/core45_rerun_20261105/release/tasks/t0035/tests/ground_truth.json",
+        "sha256": "0d3bfb5b1a9d7c1aebf1b09cd696634df3d6b3efc85c7c61fc7b5f2d88a5d144"
+      }
+    },
+    {
+      "id": "t0079",
+      "task_id": "t0079",
+      "source_task_key": "gaia:00d579ea-0889-4fd9-a771-2c8d79835c8d",
+      "source_task_id": "00d579ea-0889-4fd9-a771-2c8d79835c8d",
+      "benchmark": "gaia",
+      "benchmark_name": "GAIA",
+      "category": "information",
+      "title": "Multi-tool reasoning case A",
+      "title_en": "Multi-tool reasoning case A",
+      "description": "A recorded GAIA routing case. This example includes task identifiers and aggregate execution statistics only.",
+      "text_kind": "benchmark-level description",
+      "original_task_text_included": false,
+      "track": "hal",
+      "fold": 1,
+      "candidate_count": 32,
+      "native_pass_count": 13,
+      "native_fail_count": 19,
+      "contract_id": "native.full",
+      "resource_scope": "recorded_whole_task_duration",
+      "cost_usd": {
+        "min": 0.005188600000000001,
+        "max": 22.1601,
+        "known_count": 31
+      },
+      "duration_seconds": {
+        "min": 30.324053,
+        "max": 1050.928059,
+        "known_count": 31
+      },
+      "main_cases": 16,
+      "feasible_cases": 16,
+      "oracle_q": 1.0,
+      "source": {
+        "ground_truth": "experiments/harbor_package_repair_20261031/release/tasks/t0079/tests/ground_truth.json",
+        "sha256": "f10e505d6561ea731a05278a0083c443b3d50ee6f8c9b1e9841d18c103a977e4"
+      }
+    },
+    {
+      "id": "t0083",
+      "task_id": "t0083",
+      "source_task_key": "gaia:0512426f-4d28-49f0-be77-06d05daec096",
+      "source_task_id": "0512426f-4d28-49f0-be77-06d05daec096",
+      "benchmark": "gaia",
+      "benchmark_name": "GAIA",
+      "category": "information",
+      "title": "Multi-tool reasoning case B",
+      "title_en": "Multi-tool reasoning case B",
+      "description": "A recorded GAIA routing case. This example includes task identifiers and aggregate execution statistics only.",
+      "text_kind": "benchmark-level description",
+      "original_task_text_included": false,
+      "track": "hal",
+      "fold": 3,
+      "candidate_count": 32,
+      "native_pass_count": 12,
+      "native_fail_count": 20,
+      "contract_id": "native.full",
+      "resource_scope": "recorded_whole_task_duration",
+      "cost_usd": {
+        "min": 0.0039609,
+        "max": 21.648134520631913,
+        "known_count": 32
+      },
+      "duration_seconds": {
+        "min": 13.463392,
+        "max": 2417.385767,
+        "known_count": 32
+      },
+      "main_cases": 16,
+      "feasible_cases": 15,
+      "oracle_q": 0.9375,
+      "source": {
+        "ground_truth": "experiments/harbor_package_repair_20261031/release/tasks/t0083/tests/ground_truth.json",
+        "sha256": "e72bdfa4c6a55bbb79537423c462636521f4dbadb0d277553c485a673ad8fc88"
+      }
+    },
+    {
+      "id": "t0244",
+      "task_id": "t0244",
+      "source_task_key": "online_mind2web:0059adc6b12a3822305deb68929b2de8",
+      "source_task_id": "0059adc6b12a3822305deb68929b2de8",
+      "benchmark": "online_mind2web",
+      "benchmark_name": "Online-Mind2Web",
+      "category": "interaction",
+      "title": "Web interaction case A",
+      "title_en": "Web interaction case A",
+      "description": "A recorded Online-Mind2Web routing case. This example includes task identifiers and aggregate execution statistics only.",
+      "text_kind": "benchmark-level description",
+      "original_task_text_included": false,
+      "track": "hal",
+      "fold": 2,
+      "candidate_count": 22,
+      "native_pass_count": 17,
+      "native_fail_count": 5,
+      "contract_id": "native.full",
+      "resource_scope": "recorded_whole_task_duration",
+      "cost_usd": {
+        "min": 0.013614845319128188,
+        "max": 7.82960818645666,
+        "known_count": 22
+      },
+      "duration_seconds": {
+        "min": 23.16284,
+        "max": 1719.862953,
+        "known_count": 22
+      },
+      "main_cases": 16,
+      "feasible_cases": 16,
+      "oracle_q": 1.0,
+      "source": {
+        "ground_truth": "experiments/harbor_package_repair_20261031/release/tasks/t0244/tests/ground_truth.json",
+        "sha256": "660f694ecef1a4f806a6f5a84dbeb541e003b692a64ade08a49de089d9dd711d"
+      }
+    },
+    {
+      "id": "t0245",
+      "task_id": "t0245",
+      "source_task_key": "online_mind2web:005be9dd91c95669d6ddde9ae667125c",
+      "source_task_id": "005be9dd91c95669d6ddde9ae667125c",
+      "benchmark": "online_mind2web",
+      "benchmark_name": "Online-Mind2Web",
+      "category": "interaction",
+      "title": "Web interaction case B",
+      "title_en": "Web interaction case B",
+      "description": "A recorded Online-Mind2Web routing case. This example includes task identifiers and aggregate execution statistics only.",
+      "text_kind": "benchmark-level description",
+      "original_task_text_included": false,
+      "track": "hal",
+      "fold": 1,
+      "candidate_count": 22,
+      "native_pass_count": 5,
+      "native_fail_count": 17,
+      "contract_id": "native.full",
+      "resource_scope": "recorded_whole_task_duration",
+      "cost_usd": {
+        "min": 0.028434549707830156,
+        "max": 7.82960818645666,
+        "known_count": 21
+      },
+      "duration_seconds": {
+        "min": 55.31144,
+        "max": 2502.31509,
+        "known_count": 21
+      },
+      "main_cases": 16,
+      "feasible_cases": 12,
+      "oracle_q": 0.75,
+      "source": {
+        "ground_truth": "experiments/compact_benchmark_20261102/ground_truth_repair_20261105/private_tasks/t0245/tests/ground_truth.json",
+        "sha256": "dfbd82dfbd22f10ae5a356ea51f1d3cddfead0246d1cfd0b6b209979fdcbe1ce"
+      }
+    },
+    {
+      "id": "t0547",
+      "task_id": "t0547",
+      "source_task_key": "scicode:14",
+      "source_task_id": "14",
+      "benchmark": "scicode",
+      "benchmark_name": "SciCode",
+      "category": "science",
+      "title": "Brownian motion in an optical trap",
+      "title_en": "Brownian motion in an optical trap",
+      "description": "Numerically estimate the mean squared displacement of an optically trapped microsphere at a specified time.",
+      "text_kind": "curated paraphrase",
+      "original_task_text_included": false,
+      "track": "hal",
+      "fold": 4,
+      "candidate_count": 33,
+      "native_pass_count": 3,
+      "native_fail_count": 30,
+      "contract_id": "native.full",
+      "resource_scope": "recorded_whole_task_duration",
+      "cost_usd": {
+        "min": 0.0004317612102089604,
+        "max": 4.354671366072517,
+        "known_count": 33
+      },
+      "duration_seconds": {
+        "min": 2.156007,
+        "max": 1184.19957,
+        "known_count": 33
+      },
+      "main_cases": 16,
+      "feasible_cases": 16,
+      "oracle_q": 1.0,
+      "source": {
+        "ground_truth": "experiments/harbor_package_repair_20261031/release/tasks/t0547/tests/ground_truth.json",
+        "sha256": "7c439bebe90142de88c668c7fdcb963daa59fe6d0ab3c643cb272ba8065d3252"
+      }
+    },
+    {
+      "id": "t1167",
+      "task_id": "t1167",
+      "source_task_key": "scicode:66",
+      "source_task_id": "66",
+      "benchmark": "scicode",
+      "benchmark_name": "SciCode",
+      "category": "science",
+      "title": "One model, two configurations",
+      "title_en": "One model, two configurations",
+      "description": "Compute the Kolmogorov–Crespi potential for a bilayer atomic structure, with native checks for individual saved steps.",
+      "text_kind": "curated paraphrase",
+      "original_task_text_included": false,
+      "track": "scicode_archived_steps",
+      "fold": 3,
+      "candidate_count": 2,
+      "native_pass_count": 2,
+      "native_fail_count": 0,
+      "contract_id": "native.step:66.2",
+      "resource_scope": "saved_output_cumulative_prefix",
+      "cost_usd": {
+        "min": 0.044058,
+        "max": 0.336558,
+        "known_count": 2
+      },
+      "duration_seconds": {
+        "min": 85.445399,
+        "max": 261.894393,
+        "known_count": 2
+      },
+      "main_cases": 96,
+      "feasible_cases": 22,
+      "oracle_q": 0.22916666666666666,
+      "source": {
+        "ground_truth": "experiments/harbor_package_repair_20261031/release/tasks/t1167/tests/ground_truth.json",
+        "sha256": "49fb0ac6730ce4156095cf22b143df8db9ae52b97039413d39dc462f60c4d19a"
+      }
+    },
+    {
+      "id": "t0611",
+      "task_id": "t0611",
+      "source_task_key": "scienceagentbench:100",
+      "source_task_id": "100",
+      "benchmark": "scienceagentbench",
+      "benchmark_name": "ScienceAgentBench",
+      "category": "science",
+      "title": "Three views of spatial data",
+      "title_en": "Three views of spatial data",
+      "description": "Plot spatial data by total counts, gene counts, and clusters, then combine the views into one figure.",
+      "text_kind": "curated paraphrase",
+      "original_task_text_included": false,
+      "track": "hal",
+      "fold": 3,
+      "candidate_count": 23,
+      "native_pass_count": 9,
+      "native_fail_count": 14,
+      "contract_id": "native.full",
+      "resource_scope": "recorded_whole_task_duration",
+      "cost_usd": {
+        "min": 0.0007888394349348206,
+        "max": 0.607845,
+        "known_count": 23
+      },
+      "duration_seconds": {
+        "min": 0.033725,
+        "max": 998.272877,
+        "known_count": 23
+      },
+      "main_cases": 16,
+      "feasible_cases": 11,
+      "oracle_q": 0.6875,
+      "source": {
+        "ground_truth": "experiments/harbor_package_repair_20261031/release/tasks/t0611/tests/ground_truth.json",
+        "sha256": "fcd2f8a6723199454a87609f8a603a618213d4795e7dff7a72308949424ffddc"
+      }
+    },
+    {
+      "id": "t0617",
+      "task_id": "t0617",
+      "source_task_key": "scienceagentbench:14",
+      "source_task_id": "14",
+      "benchmark": "scienceagentbench",
+      "benchmark_name": "ScienceAgentBench",
+      "category": "science",
+      "title": "Subsidence and flood risk",
+      "title_en": "Subsidence and flood risk",
+      "description": "Use projected elevation data to identify flood-prone areas, estimate potential building damage, and save the analysis plots.",
+      "text_kind": "curated paraphrase",
+      "original_task_text_included": false,
+      "track": "hal",
+      "fold": 2,
+      "candidate_count": 23,
+      "native_pass_count": 11,
+      "native_fail_count": 12,
+      "contract_id": "native.full",
+      "resource_scope": "recorded_whole_task_duration",
+      "cost_usd": {
+        "min": 0.0021925,
+        "max": 0.567405,
+        "known_count": 23
+      },
+      "duration_seconds": {
+        "min": 0.0,
+        "max": 431.05515,
+        "known_count": 23
+      },
+      "main_cases": 16,
+      "feasible_cases": 15,
+      "oracle_q": 0.9375,
+      "source": {
+        "ground_truth": "experiments/harbor_package_repair_20261031/release/tasks/t0617/tests/ground_truth.json",
+        "sha256": "473f91fedbff14c9313af650c32f0cabe7a1f468fea4ba9321c35eda32a45e4d"
+      }
+    },
+    {
+      "id": "t0711",
+      "task_id": "t0711",
+      "source_task_key": "swebench_verified_mini:django__django-11790",
+      "source_task_id": "django__django-11790",
+      "benchmark": "swebench_verified_mini",
+      "benchmark_name": "SWE-bench Verified Mini",
+      "category": "coding",
+      "title": "Restore a form length constraint",
+      "title_en": "Restore a form length constraint",
+      "description": "Fix a Django login form that fails to render the username field's maximum length attribute.",
+      "text_kind": "curated paraphrase",
+      "original_task_text_included": false,
+      "track": "hal",
+      "fold": 4,
+      "candidate_count": 33,
+      "native_pass_count": 11,
+      "native_fail_count": 22,
+      "contract_id": "native.full",
+      "resource_scope": "recorded_whole_task_duration",
+      "cost_usd": {
+        "min": 0.011715800000000002,
+        "max": 28.393202597626725,
+        "known_count": 31
+      },
+      "duration_seconds": {
+        "min": 0.0,
+        "max": 871.93438,
+        "known_count": 32
+      },
+      "main_cases": 16,
+      "feasible_cases": 16,
+      "oracle_q": 1.0,
+      "source": {
+        "ground_truth": "experiments/harbor_package_repair_20261031/release/tasks/t0711/tests/ground_truth.json",
+        "sha256": "b747196ca17b3dfd997b306df1a2610b9b13c40db8ca82ec79146f14ab6d22c7"
+      }
+    },
+    {
+      "id": "t0713",
+      "task_id": "t0713",
+      "source_task_key": "swebench_verified_mini:django__django-11848",
+      "source_task_id": "django__django-11848",
+      "benchmark": "swebench_verified_mini",
+      "benchmark_name": "SWE-bench Verified Mini",
+      "category": "coding",
+      "title": "Repair HTTP date parsing",
+      "title_en": "Repair HTTP date parsing",
+      "description": "Fix how Django's HTTP date parser interprets two-digit years.",
+      "text_kind": "curated paraphrase",
+      "original_task_text_included": false,
+      "track": "hal",
+      "fold": 0,
+      "candidate_count": 33,
+      "native_pass_count": 9,
+      "native_fail_count": 24,
+      "contract_id": "native.full",
+      "resource_scope": "recorded_whole_task_duration",
+      "cost_usd": {
+        "min": 0.009332100000000001,
+        "max": 25.511610538275942,
+        "known_count": 33
+      },
+      "duration_seconds": {
+        "min": 36.466256,
+        "max": 695.025582,
+        "known_count": 33
+      },
+      "main_cases": 16,
+      "feasible_cases": 12,
+      "oracle_q": 0.75,
+      "source": {
+        "ground_truth": "experiments/compact_benchmark_20261102/ground_truth_repair_20261105/private_tasks/t0713/tests/ground_truth.json",
+        "sha256": "f5e6eb0de40dfd97f38df779a4ebde260b3ac4bd71bed1283c155d702ee01c6c"
+      }
+    },
+    {
+      "id": "t0761",
+      "task_id": "t0761",
+      "source_task_key": "taubench_airline:0",
+      "source_task_id": "0",
+      "benchmark": "taubench_airline",
+      "benchmark_name": "τ-bench Airline",
+      "category": "interaction",
+      "title": "Book a flight under constraints",
+      "title_en": "Book a flight under constraints",
+      "description": "Complete a flight booking subject to departure time, cabin, baggage, and payment constraints.",
+      "text_kind": "curated paraphrase",
+      "original_task_text_included": false,
+      "track": "hal",
+      "fold": 4,
+      "candidate_count": 26,
+      "native_pass_count": 12,
+      "native_fail_count": 14,
+      "contract_id": "native.full",
+      "resource_scope": "recorded_whole_task_duration",
+      "cost_usd": {
+        "min": 0.0078755,
+        "max": 5.08893,
+        "known_count": 25
+      },
+      "duration_seconds": {
+        "min": 6.942286,
+        "max": 1153.819397,
+        "known_count": 25
+      },
+      "main_cases": 16,
+      "feasible_cases": 16,
+      "oracle_q": 1.0,
+      "source": {
+        "ground_truth": "experiments/harbor_package_repair_20261031/release/tasks/t0761/tests/ground_truth.json",
+        "sha256": "81fa72337aa042c477f71ced79558417a709f55f76dca4237e279e84d4411ef9"
+      }
+    },
+    {
+      "id": "t0763",
+      "task_id": "t0763",
+      "source_task_key": "taubench_airline:10",
+      "source_task_id": "10",
+      "benchmark": "taubench_airline",
+      "benchmark_name": "τ-bench Airline",
+      "category": "interaction",
+      "title": "Change a reservation and rebook",
+      "title_en": "Change a reservation and rebook",
+      "description": "Handle a request to remove a passenger or cancel a reservation, then rebook according to cost and itinerary preferences.",
+      "text_kind": "curated paraphrase",
+      "original_task_text_included": false,
+      "track": "hal",
+      "fold": 1,
+      "candidate_count": 26,
+      "native_pass_count": 5,
+      "native_fail_count": 21,
+      "contract_id": "native.full",
+      "resource_scope": "recorded_whole_task_duration",
+      "cost_usd": {
+        "min": 0.008372230729793496,
+        "max": 6.538905,
+        "known_count": 26
+      },
+      "duration_seconds": {
+        "min": 8.357156,
+        "max": 514.560343,
+        "known_count": 26
+      },
+      "main_cases": 16,
+      "feasible_cases": 4,
+      "oracle_q": 0.25,
+      "source": {
+        "ground_truth": "experiments/harbor_package_repair_20261031/release/tasks/t0763/tests/ground_truth.json",
+        "sha256": "baeef8b144027b370f0ec084af2895751b79ed798a27c740d7dd05acdf21934d"
+      }
+    },
+    {
+      "id": "t0811",
+      "task_id": "t0811",
+      "source_task_key": "usaco:1011_bronze_triangles",
+      "source_task_id": "1011_bronze_triangles",
+      "benchmark": "usaco",
+      "benchmark_name": "USACO",
+      "category": "coding",
+      "title": "Largest triangular pasture",
+      "title_en": "Largest triangular pasture",
+      "description": "Find the largest triangle whose vertices belong to a given point set and whose sides satisfy the axis-alignment constraints.",
+      "text_kind": "curated paraphrase",
+      "original_task_text_included": false,
+      "track": "hal",
+      "fold": 2,
+      "candidate_count": 10,
+      "native_pass_count": 9,
+      "native_fail_count": 1,
+      "contract_id": "native.full",
+      "resource_scope": "recorded_whole_task_duration",
+      "cost_usd": {
+        "min": 0.0030901000000000006,
+        "max": 0.5427,
+        "known_count": 10
+      },
+      "duration_seconds": {
+        "min": 8.71464,
+        "max": 94.186864,
+        "known_count": 10
+      },
+      "main_cases": 16,
+      "feasible_cases": 16,
+      "oracle_q": 1.0,
+      "source": {
+        "ground_truth": "experiments/harbor_package_repair_20261031/release/tasks/t0811/tests/ground_truth.json",
+        "sha256": "88026fbe04d7293ee7b2d83e992ce1d51618616caa8934d462941498c7f3d9ea"
+      }
+    },
+    {
+      "id": "t0814",
+      "task_id": "t0814",
+      "source_task_key": "usaco:1014_silver_swapity_swapity_swap",
+      "source_task_id": "1014_silver_swapity_swapity_swap",
+      "benchmark": "usaco",
+      "benchmark_name": "USACO",
+      "category": "coding",
+      "title": "Repeated range reversals",
+      "title_en": "Repeated range reversals",
+      "description": "Compute the final permutation efficiently after a large number of repeated range reversals.",
+      "text_kind": "curated paraphrase",
+      "original_task_text_included": false,
+      "track": "hal",
+      "fold": 4,
+      "candidate_count": 10,
+      "native_pass_count": 1,
+      "native_fail_count": 9,
+      "contract_id": "native.full",
+      "resource_scope": "recorded_whole_task_duration",
+      "cost_usd": {
+        "min": 0.003223,
+        "max": 0.51933,
+        "known_count": 10
+      },
+      "duration_seconds": {
+        "min": 8.171706,
+        "max": 181.657791,
+        "known_count": 10
+      },
+      "main_cases": 16,
+      "feasible_cases": 1,
+      "oracle_q": 0.0625,
+      "source": {
+        "ground_truth": "experiments/harbor_package_repair_20261031/release/tasks/t0814/tests/ground_truth.json",
+        "sha256": "948cc1143053dfbfac39de1d0711a4aef4e579ba2c4539e862eb6cc586c401f2"
+      }
+    }
+  ]
+}
