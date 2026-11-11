@@ -11,34 +11,6 @@ const usd = x => x == null ? '—' : '$' + Number(x).toFixed(6);
 let benchmark, analysis;
 const state = {metric:'q', benchmark:'ALL'};
 
-const modules = [
-  {title:'A / Objective formulation',text:'A task context x, an acceptance target g, and cost–time limits (B, D) define a selection instance. Candidate configurations combine a model, an execution harness, and their recorded settings.',flow:['Task context + candidates','Objective r = (g, B, D)','Selection problem']},
-  {title:'B / Native execution evidence',text:'Executions in the original task environments provide trajectories, native verdicts, costs, and durations. Evidence is aligned by task, target, and candidate while preserving the scope of each acceptance check.',flow:['Native task environments','Recorded executions','Target-aligned facts']},
-  {title:'C / Objective-conditioned construction',text:'Source-task splits separate permitted history from private target facts. Historical quantiles calibrate a 4 × 4 budget–time grid. Each specification induces the satisfactory set F and its minimum-cost subset O.',flow:['Other-task history','Public selection packages','Private reference sets F, O']},
-  {title:'D / Selection and evaluation',text:'The selector submits one candidate ID per scenario. Q evaluates objective satisfaction; E combines feasible-scenario success with cost efficiency. Reference-set relations test necessary switching and consistency under relaxed constraints.',flow:['Candidate selection','Q · E = H × C','Adaptation + consistency']}
-];
-function renderModule(index) {
-  const m = modules[index];
-  $('#module-panel').innerHTML = `<div><h3>${m.title}</h3><p>${m.text}</p></div><div class="module-flow">${m.flow.map((t,i) => `${i?'<b aria-hidden="true">→</b>':''}<span>${t}</span>`).join('')}</div>`;
-  $('#module-panel').setAttribute('aria-labelledby', `module-tab-${'abcde'[index]}`);
-  $$('.module-tabs button').forEach((b,i) => {b.setAttribute('aria-selected',String(i===index));b.tabIndex=i===index?0:-1;});
-}
-function tabKeyboard(container) {
-  container.addEventListener('keydown', event => {
-    const tabs = $$('[role=tab]',container), at = tabs.indexOf(document.activeElement);
-    if (at<0) return;
-    let next;
-    if (event.key==='ArrowRight') next=(at+1)%tabs.length;
-    else if (event.key==='ArrowLeft') next=(at+tabs.length-1)%tabs.length;
-    else if (event.key==='Home') next=0;
-    else if (event.key==='End') next=tabs.length-1;
-    else return;
-    event.preventDefault(); tabs[next].focus();tabs[next].click();
-  });
-}
-$$('.module-tabs button').forEach(b=>b.addEventListener('click',()=>renderModule(+b.dataset.module)));
-tabKeyboard($('.module-tabs'));renderModule(0);
-
 $('.menu-toggle').addEventListener('click', () => {
   const open=$('.menu-toggle').getAttribute('aria-expanded')!=='true';
   $('.menu-toggle').setAttribute('aria-expanded',String(open));$('.site-header nav').classList.toggle('is-open',open);
@@ -52,7 +24,17 @@ $$('dialog').forEach(dialog=>{
   dialog.addEventListener('close',()=>document.body.classList.remove('dialog-open'));
   dialog.addEventListener('click',e=>{if(e.target===dialog){const r=dialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)dialog.close();}});
 });
-$('.image-zoom').addEventListener('click',()=>openDialog($('#image-dialog')));
+$$('.image-zoom').forEach(button => button.addEventListener('click', () => {
+  const dialog = $('#image-dialog'), preview = $('img', button);
+  $('img', dialog).src = button.dataset.image;
+  $('img', dialog).alt = preview.alt;
+  $('.zoom-toolbar a', dialog).href = button.dataset.pdf;
+  $('#zoom-title').textContent = button.dataset.title;
+  dialog.setAttribute('aria-label', button.dataset.title);
+  openDialog(dialog);
+  $('.image-dialog-scroll', dialog).scrollTo(0, 0);
+  dialog.scrollTop = 0;
+}));
 
 function initializeResults() {
   $('#snapshot-label').textContent=`Results snapshot: ${benchmark.meta.results_date}`;
