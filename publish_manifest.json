@@ -37,6 +37,7 @@
     "data/by_benchmark.csv",
     "data/model_diagnostics.csv",
     "data/condition_scores.csv",
-    "data/paper_version.json"
+    "data/paper_version.json",
+    "assets/huggingface.svg"
   ]
 }
