@@ -1,10 +1,10 @@
 // Shared horizontal gallery. Every visual is computed from the published case facts.
 const escapeHTML = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+// Three visual rows; benchmark identities stay on every case card.
 const categories = [
-  {id:'science',name:'Science & computing',color:'#537ba5'},
-  {id:'coding',name:'Code & algorithms',color:'#8870a5'},
-  {id:'interaction',name:'Tools & interaction',color:'#b47c42'},
-  {id:'information',name:'Information & reasoning',color:'#478779'}
+  {id:'science',name:'Science & computing',color:'#537ba5',includes:item=>item.category==='science'},
+  {id:'code-web',name:'Code & web interaction',color:'#8870a5',includes:item=>item.category==='coding'||item.benchmark==='online_mind2web'},
+  {id:'information-service',name:'Information & service tasks',color:'#478779',includes:item=>item.category==='information'||(item.category==='interaction'&&item.benchmark!=='online_mind2web')}
 ];
 const cleanups = new WeakMap();
 let instance = 0;
@@ -42,7 +42,7 @@ export function renderGalleryStrips(container, examples) {
   if (!container) return () => {};
   cleanups.get(container)?.();
   container.classList.add('gallery-strips');
-  const groups = categories.map(group=>({...group,items:examples.filter(item=>item.category===group.id)})).filter(group=>group.items.length);
+  const groups = categories.map(group=>({...group,items:examples.filter(group.includes)})).filter(group=>group.items.length);
   const id=++instance;
   container.innerHTML = groups.map(group=>{
     const trackId=`case-strip-${id}-${group.id}`;
@@ -63,6 +63,37 @@ export function renderGalleryStrips(container, examples) {
       track.scrollBy({left:Number(button.dataset.stripDirection)*Math.max(300,track.clientWidth*.75),behavior:reduced.matches?'instant':'smooth'});
     },{signal:controller.signal}));
     track.addEventListener('scroll',update,{passive:true,signal:controller.signal});
+    // Desktop drag-to-scroll, preserving touch scrolling and ordinary link clicks.
+    let drag=null, suppressClickUntil=0;
+    track.addEventListener('pointerdown',event=>{
+      if(event.pointerType!=='mouse'||event.button!==0||event.ctrlKey||event.metaKey||event.shiftKey||event.altKey)return;
+      drag={id:event.pointerId,x:event.clientX,y:event.clientY,scroll:track.scrollLeft,active:false};
+    },{signal:controller.signal});
+    track.addEventListener('pointermove',event=>{
+      if(!drag||event.pointerId!==drag.id)return;
+      const dx=event.clientX-drag.x,dy=event.clientY-drag.y;
+      if(!drag.active){
+        if(Math.abs(dx)<7||Math.abs(dx)<=Math.abs(dy))return;
+        drag.active=true;track.classList.add('is-dragging');track.setPointerCapture(event.pointerId);
+      }
+      event.preventDefault();track.scrollLeft=drag.scroll-dx;
+    },{signal:controller.signal});
+    const finishDrag=event=>{
+      if(!drag||event.pointerId!==drag.id)return;
+      if(drag.active)suppressClickUntil=Date.now()+350;
+      drag=null;track.classList.remove('is-dragging');
+      if(track.hasPointerCapture(event.pointerId))track.releasePointerCapture(event.pointerId);
+      update();
+    };
+    track.addEventListener('pointerup',finishDrag,{signal:controller.signal});
+    track.addEventListener('pointercancel',finishDrag,{signal:controller.signal});
+    track.addEventListener('lostpointercapture',()=>{drag=null;track.classList.remove('is-dragging');},{signal:controller.signal});
+    track.addEventListener('pointerleave',()=>{if(drag&&!drag.active)drag=null;},{signal:controller.signal});
+    track.addEventListener('dragstart',event=>event.preventDefault(),{signal:controller.signal});
+    track.addEventListener('click',event=>{
+      if(Date.now()<suppressClickUntil){event.preventDefault();event.stopPropagation();}
+    },{capture:true,signal:controller.signal});
+
     track.addEventListener('keydown',event=>{
       if(event.target!==track) return;
       let left;
