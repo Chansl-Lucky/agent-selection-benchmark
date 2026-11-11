@@ -1,6 +1,6 @@
 # Benchmarking Agent Selection under Heterogeneous Objectives
 
-**[Project website](https://chansl-lucky.github.io/agent-selection-benchmark/)** · **[Leaderboard](https://chansl-lucky.github.io/agent-selection-benchmark/#results)** · **[Behavioral analysis](https://chansl-lucky.github.io/agent-selection-benchmark/#analysis)** · **[Dataset](https://huggingface.co/datasets/PeterChan66/agent-selection-benchmark)**
+**[Project website](https://chansl-lucky.github.io/agent-selection-benchmark/)** · **[Leaderboard](https://chansl-lucky.github.io/agent-selection-benchmark/#results)** · **[Behavioral analysis](https://chansl-lucky.github.io/agent-selection-benchmark/#analysis)** · **[Dataset](https://huggingface.co/datasets/PeterChan66/agent-selection-benchmark)** · **[Gallery](https://chansl-lucky.github.io/agent-selection-benchmark/gallery.html)** · **[Research question](https://chansl-lucky.github.io/agent-selection-benchmark/research.html)**
 
 This repository hosts the English project website, manuscript, result visualizations, and compact exported evidence for the benchmark. It is the public release entry point; the complete task-package archive and benchmark runner will be released separately.
 
@@ -20,7 +20,10 @@ The leaderboard describes recorded selector systems, including their evidence-ac
 
 ## Explore the release
 
-- `index.html`, `app.js`, `styles.css`: interactive project page and results.
+- `index.html`, `app.js`, `styles.css`, `academic.css`: academic project page and interactive results.
+- `research.html`: research question and formulation.
+- `gallery.html`, `case.html`, `gallery.js`, `gallery.css`: searchable gallery and standalone archived case pages.
+- `assets/fonts/`: locally served Noto Sans and Google Sans, with their SIL Open Font Licenses.
 - `scoring.js`: deterministic scoring for the SciCode 66 demonstration.
 - `data/benchmark.json`: eight-selector overall and per-family scores.
 - `data/analysis.json`: adaptation, switching, consistency, and resource-condition analyses.
@@ -50,4 +53,4 @@ The static builder creates a clean `dist/` from `publish_manifest.json`. `script
 
 GitHub Pages serves the root of the **`gh-pages`** branch. The **`main`** branch retains the site source and validation utilities. The runtime uses no credentials or analytics.
 
-Page organization was inspired by [EduIllustrate](https://ecnu-innospark.github.io/EduIllustrate/). The site content and experimental results belong to this benchmark. Local font licensing is recorded in `assets/FONT-LICENSE.txt`; upstream task-data terms will accompany the separate dataset release.
+Page organization was inspired by [EduIllustrate](https://ecnu-innospark.github.io/EduIllustrate/). The site content and experimental results belong to this benchmark. Local font licensing is recorded in `assets/fonts/` (Noto Sans and Google Sans) and `assets/FONT-LICENSE.txt` (legacy assets); upstream task-data terms will accompany the separate dataset release.

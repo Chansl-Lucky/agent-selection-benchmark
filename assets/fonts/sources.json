@@ -1,0 +1,34 @@
+[
+  {
+    "font": "Noto Sans",
+    "subset": "latin-ext",
+    "file": "noto-sans-latin-ext.woff2",
+    "bytes": 167960,
+    "sha256": "6d5a79315528df191b9d86f97b0c4272a8b588fcb166773fe6588ac795de0613",
+    "source": "https://fonts.gstatic.com/s/notosans/v42/o-0bIpQlx3QUlC5A4PNB6Ryti20_6n1iPHjc5aDdu2ui.woff2"
+  },
+  {
+    "font": "Noto Sans",
+    "subset": "latin",
+    "file": "noto-sans-latin.woff2",
+    "bytes": 35820,
+    "sha256": "51ca196f49a33e79e7870ff88ebd2829a3f627a51e7d690986618f0e7ad2b52d",
+    "source": "https://fonts.gstatic.com/s/notosans/v42/o-0bIpQlx3QUlC5A4PNB6Ryti20_6n1iPHjc5a7duw.woff2"
+  },
+  {
+    "font": "Google Sans",
+    "subset": "latin-ext",
+    "file": "google-sans-latin-ext.woff2",
+    "bytes": 21672,
+    "sha256": "1e61fd6c13712a5a7cb5ff5598d45480989f6f17ad1e9321979a059d3392f4fb",
+    "source": "https://fonts.gstatic.com/s/googlesans/v76/4UasrENHsxJlGDuGo1OIlJfC6l_24rlCK1Yo_Iqcsih3SAyH6cAwhX9RPjwUvaYr.woff2"
+  },
+  {
+    "font": "Google Sans",
+    "subset": "latin",
+    "file": "google-sans-latin.woff2",
+    "bytes": 36040,
+    "sha256": "df4ccb79a78e07ce44367a5ebcc7487bc58dd33b88a0c2a7e7db2735f4d6803e",
+    "source": "https://fonts.gstatic.com/s/googlesans/v76/4UasrENHsxJlGDuGo1OIlJfC6l_24rlCK1Yo_Iqcsih3SAyH6cAwhX9RPjIUvQ.woff2"
+  }
+]

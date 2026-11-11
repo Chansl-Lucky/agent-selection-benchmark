@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Research Question — Agent Selection Benchmark</title>
+  <meta name="description" content="Research question, formalization, and evaluation of agent selection under heterogeneous objectives.">
+  <link rel="canonical" href="https://chansl-lucky.github.io/agent-selection-benchmark/research.html">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="academic.css">
+  <script src="navigation.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="./">Agent Selection Benchmark</a>
+    <nav aria-label="Main navigation"><a href="./#framework">Benchmark</a><a href="./#results">Results</a><a href="./#analysis">Analysis</a><a href="research.html" aria-current="page">Research Question</a><a href="gallery.html">Gallery</a></nav>
+    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
+  </header>
+  <main id="main">
+    <header class="article-header"><h1>Research Question</h1><p>Agent selection under heterogeneous objectives</p></header>
+    <article class="article-content wrap">
+      <p>Language-model applications increasingly execute tasks through tools and agent harnesses. The object of selection is therefore an execution configuration: a model, its harness, and the settings that determine how it interacts with the task environment. Its suitability depends on both the required outcome and the conditions under which that outcome must be achieved.</p>
+      <h2>What should an agent selector be evaluated on?</h2>
+      <p><strong>Can a selector identify a satisfactory and economical agent for a specified objective, and adjust appropriately when its execution conditions change?</strong></p>
+      <p>A scientific task may require a complete solution or an independently checked component. For a fixed acceptance target, changing the cost or time limit can change which configurations qualify. Even when several configurations pass, their expenditure may differ. An overall configuration ranking cannot resolve these individual choices.</p>
+      <p>The benchmark evaluates each decision against recorded execution evidence, then examines related decisions sharing the same task context. This allows us to distinguish a stable satisfactory choice from a missed opportunity to adapt.</p>
+      <h2>Objective specifications and reference sets</h2>
+      <p>An objective <strong>r = (g, B, D)</strong> specifies a native acceptance target <em>g</em>, a cost limit <em>B</em>, and a recorded execution-duration limit <em>D</em>. The candidate pool consists of the model–harness configurations observed for that task.</p>
+      <p class="equation"><strong>F(r)</strong> = { candidates that pass g, with cost ≤ B and duration ≤ D }</p>
+      <p>The satisfactory set <strong>F</strong> contains every observed candidate that fulfills the objective. Its minimum-cost subset <strong>O</strong> includes all equally economical satisfactory candidates. These sets are calculated from native verdicts and resource records; they do not require a new language-model judge.</p>
+      <p>The selector receives task context, candidate descriptions, the objective specification, and history from other source tasks. The current task’s outcome and resource records remain private to the evaluator. Source-task grouping keeps all configurations, steps, and views of one task in the same fold.</p>
+      <figure><img src="assets/requirement_construction.svg" width="1200" height="650" alt="Objective formulation, native execution evidence, public selection packages, and private reference sets used to score selections."><figcaption>Construction of related selection problems from recorded native executions. Historical records provide selection evidence and calibrate resource limits; target records establish correctness.</figcaption></figure>
+      <h2>Three complementary evaluation questions</h2>
+      <h3>1. Does the selected configuration fulfill the objective?</h3>
+      <p><strong>Objective satisfaction Q</strong> measures membership in F. <strong>Cost efficiency E</strong> compares the cost of a satisfactory selection with the least expensive satisfactory execution. A native pass beyond a required resource limit is not a satisfactory selection. When both alternatives qualify, lower execution cost receives greater efficiency credit.</p>
+      <p>The <a href="case.html?id=t1167">SciCode task 66 walkthrough</a> shows the calculation using two harnesses of the same model. It includes the historical evidence, budget and duration thresholds, candidate outcomes, and the resulting q and e for an individual scenario.</p>
+      <h3>2. Does the selector adapt where a change is necessary?</h3>
+      <p>Candidate-set intersections establish whether one choice can remain satisfactory across all feasible conditions. Of 940 task–target groups with at least one feasible condition, 715 share a minimum-cost satisfactory candidate across conditions. Another 111 share a satisfactory candidate but no common minimum-cost choice. The remaining 114 require candidate changes to cover every feasible condition.</p>
+      <p>These distinctions allow stable choices to be evaluated on their merits. Switching frequency alone is not evidence of appropriate adaptation. We measure whether the recorded selections recover the outcomes available across related conditions, and compare them with reusing each selector’s unconstrained choice.</p>
+      <h3>3. Does a relaxed constraint preserve attainable success?</h3>
+      <p>When a budget or time limit is relaxed while the task and target remain fixed, a previously satisfactory execution is still feasible. If the selector’s new choice fails, its earlier successful choice supplies a concrete witness that the regression was avoidable.</p>
+      <p>The regression rate is computed on relaxation comparisons whose tighter-condition choice was satisfactory. It complements satisfaction and efficiency: a low regression rate alone does not establish high overall selection quality.</p>
+      <h2>What the current evaluation shows</h2>
+      <p>The eight recorded selector systems improve satisfaction by 0.71–14.60 percentage points with condition-specific choices compared with reusing their unconstrained choices. Yet the best selector fully covers only nine of the 114 groups that require candidate changes, and avoidable regression rates reach 9.63%. Aggregate benefit and appropriate adaptation across conditions are therefore distinct empirical outcomes.</p>
+      <p>These are analyses of the existing recorded selections and execution evidence. The benchmark supports direct inspection of individual choices, the reference sets behind their scores, and the relations between those choices.</p>
+      <p class="section-links"><a href="./#results">Experimental results →</a><a href="./#analysis">Adaptation and consistency analysis →</a><a href="gallery.html">Task gallery →</a></p>
+    </article>
+  </main>
+  <footer class="site-footer wrap"><div><a href="./" class="footer-brand">Agent Selection Benchmark</a><p>Benchmark data, evaluation protocol, and recorded results.</p></div><div class="footer-meta"><a href="assets/paper.pdf">Read the paper ↗</a><a href="https://github.com/Chansl-Lucky/agent-selection-benchmark">Code ↗</a></div></footer>
+</body>
+</html>

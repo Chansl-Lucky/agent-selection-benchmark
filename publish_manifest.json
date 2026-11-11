@@ -1,5 +1,5 @@
 {
-  "version": "public_site_20261111",
+  "version": "academic_layout_20261111",
   "files": [
     "index.html",
     "dataset.html",
@@ -38,6 +38,22 @@
     "data/model_diagnostics.csv",
     "data/condition_scores.csv",
     "data/paper_version.json",
-    "assets/huggingface.svg"
+    "assets/huggingface.svg",
+    "academic.css",
+    "research.html",
+    "navigation.js",
+    "gallery.html",
+    "case.html",
+    "gallery.js",
+    "gallery.css",
+    "assets/fonts/google-sans-OFL.txt",
+    "assets/fonts/google-sans-latin-ext.woff2",
+    "assets/fonts/google-sans-latin.woff2",
+    "assets/fonts/google-sans.css",
+    "assets/fonts/noto-sans-OFL.txt",
+    "assets/fonts/noto-sans-latin-ext.woff2",
+    "assets/fonts/noto-sans-latin.woff2",
+    "assets/fonts/noto-sans.css",
+    "assets/fonts/sources.json"
   ]
 }
