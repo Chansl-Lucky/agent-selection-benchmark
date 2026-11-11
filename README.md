@@ -23,6 +23,7 @@ The leaderboard describes recorded selector systems, including their evidence-ac
 - `index.html`, `app.js`, `styles.css`, `academic.css`: academic project page and interactive results.
 - `research.html`: research question and formulation.
 - `gallery.html`, `case.html`, `gallery.js`, `gallery.css`: searchable gallery and standalone archived case pages.
+- `gallery-strip.js`, `gallery-strip.css`: shared horizontal preview rows on the homepage and gallery, drawn from archived case facts.
 - `assets/fonts/`: locally served Noto Sans and Google Sans, with their SIL Open Font Licenses.
 - `scoring.js`: deterministic scoring for the SciCode 66 demonstration.
 - `data/benchmark.json`: eight-selector overall and per-family scores.

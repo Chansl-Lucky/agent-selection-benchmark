@@ -1,3 +1,4 @@
+import {renderGalleryStrips} from './gallery-strip.js';
 const legacyPages = {'#cases':'gallery.html','#question':'research.html','#explorer':'case.html?id=t1167'};
 if (legacyPages[location.hash]) location.replace(legacyPages[location.hash]);
 
@@ -93,8 +94,9 @@ function renderAnalysis() {
 
 async function loadData() {
   try {
-    const response=await Promise.all(['benchmark','analysis'].map(async name=>{const r=await fetch(`data/${name}.json`);if(!r.ok)throw new Error(`${name}: ${r.status}`);return r.json();}));
+    const response=await Promise.all(['benchmark','analysis','gallery'].map(async name=>{const r=await fetch(`data/${name}.json`);if(!r.ok)throw new Error(`${name}: ${r.status}`);return r.json();}));
     [benchmark,analysis]=response;
+    renderGalleryStrips($('#home-gallery-strips'),response[2].examples);
     initializeResults();renderAnalysis();
     document.body.dataset.ready='true';
   } catch (error) {

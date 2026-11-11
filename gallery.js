@@ -1,3 +1,4 @@
+import {renderGalleryStrips} from './gallery-strip.js';
 import {evaluateScenario, referenceScores} from './scoring.js';
 
 const $ = selector => document.querySelector(selector);
@@ -21,7 +22,7 @@ function renderGallery() {
   const search = $('#gallery-search').value.toLowerCase().trim();
   const visible = examples.filter(item => (benchmark === 'all' || item.benchmark === benchmark) && [item.title,item.description,item.benchmark_name,item.task_id,item.source_task_id].join(' ').toLowerCase().includes(search));
   $('#gallery-count').textContent = `${visible.length} of ${examples.length} examples`;
-  $('#example-grid').innerHTML = visible.map(item => `<a class="example-link" href="case.html?id=${encodeURIComponent(item.id)}"><span class="example-benchmark">${html(item.benchmark_name)} · ${html(item.task_id)}</span><h2>${html(item.title)}</h2><p>${html(item.description)}</p><div class="example-meta">${item.candidate_count} candidate configurations<br>${item.feasible_cases} / ${item.main_cases} scenarios with a feasible candidate</div><span class="example-open">${item.id === 't1167' ? 'Explore the scoring walkthrough' : 'View archived example'} →</span></a>`).join('') || '<p class="case-empty">No examples match these filters.</p>';
+  renderGalleryStrips($('#example-grid'), visible);
 }
 
 function renderCase(item) {

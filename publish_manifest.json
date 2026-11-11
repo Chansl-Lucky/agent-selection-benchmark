@@ -1,5 +1,5 @@
 {
-  "version": "academic_layout_20261111",
+  "version": "horizontal_gallery_20261111",
   "files": [
     "index.html",
     "dataset.html",
@@ -54,6 +54,8 @@
     "assets/fonts/noto-sans-latin-ext.woff2",
     "assets/fonts/noto-sans-latin.woff2",
     "assets/fonts/noto-sans.css",
-    "assets/fonts/sources.json"
+    "assets/fonts/sources.json",
+    "gallery-strip.js",
+    "gallery-strip.css"
   ]
 }
