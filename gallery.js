@@ -27,7 +27,7 @@ function renderGallery() {
 
 function renderCase(item) {
   const stepScope = item.resource_scope === 'saved_output_cumulative_prefix';
-  document.title = `${item.benchmark_name}: ${item.title} · Agent Selection Benchmark`;
+  document.title = `${item.benchmark_name}: ${item.title} · AgentSelectionBench`;
   const position = examples.indexOf(item);
   const neighbors = [examples[position - 1],examples[position + 1]];
   $('#case-content').innerHTML = `<header class="case-heading"><p class="case-origin">${html(item.benchmark_name)} · ${html(item.task_id)} · Fold ${item.fold}</p><h1>${html(item.title)}</h1><p>${html(item.description)}</p><p class="case-note">Task description: ${html(item.text_kind)}. This page presents the archived evaluator view; target outcomes are hidden from the selector during testing.</p></header>

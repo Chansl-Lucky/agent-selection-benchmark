@@ -17,10 +17,12 @@
     "scicode_ground_truth": "Six native step facts for an explicitly labelled worked scoring example."
   },
   "paper": {
-    "title": "Benchmarking Agent Selection under Heterogeneous Objectives",
-    "revision": "heterogeneous_objectives_frontmatter_20261111",
-    "path": "paper_refine_20261108_v1/paper.pdf",
-    "pdf_sha256": "3dee96db4eee1b5ce1103eb48dc04a31f7c8b80ead1cf5e6bdd1a524b6050123"
+    "title": "AgentSelectionBench: Who Should Execute? Evaluating Capability–Objective Alignment",
+    "benchmark_name": "AgentSelectionBench",
+    "revision": "latest_framework_and_django_case_20261111",
+    "pdf_sha256": "5d1f99cccb82cd6b04b4014a7e299e9d50e5f220edd498a49533ba17137f4c0d",
+    "pages": 18,
+    "path": "paper_refine_20261108_v1/paper.pdf"
   },
   "sources": {
     "experiments/compact_benchmark_20261102/current_score_results.json": {
@@ -28,8 +30,8 @@
       "bytes": 1492
     },
     "current_paper.json": {
-      "sha256": "d6bcae2ee025c55b5186794c36ba7150356221831b4bf355ffd117741659f3b6",
-      "bytes": 1999
+      "sha256": "ff8f51c212fca4896e799b7dcd0633dffa52707ec86cd3707d57356069d59e94",
+      "bytes": 3985
     },
     "experiments/compact_benchmark_20261102/ark_expansion_20261110/publication/summary.json": {
       "sha256": "45d5b967c6c854a4ebd8bdfb6867565aca55fa5983e349504d812fa387dc2459",
@@ -186,6 +188,18 @@
     "paper_refine_20261108_v1/figure_redesign_20261110/budget/deadline_condition_scores.csv": {
       "sha256": "f1afcd0de42df7ed57e041f6171db08a7b6394f0e8826a913407c1acff721576",
       "bytes": 29982
+    },
+    "paper_refine_20261108_v1/paper.pdf": {
+      "sha256": "5d1f99cccb82cd6b04b4014a7e299e9d50e5f220edd498a49533ba17137f4c0d",
+      "bytes": 684918
+    },
+    "paper_refine_20261108_v1/figures/requirement_construction.pdf": {
+      "sha256": "3531a34d475f6e00ce6d44c1a941d1ef5cbc762c3adb9c05357b69003fd90150",
+      "bytes": 120648
+    },
+    "paper_refine_20261108_v1/figures/django_case.pdf": {
+      "sha256": "230f69ce4bbda14d1f6c12c4c631300f5eeebab91520227e5b5e213d79de223b",
+      "bytes": 89229
     }
   },
   "checks": {

@@ -4,12 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#ffffff">
-  <meta name="description" content="Benchmarking agent selection under heterogeneous objectives: native execution evidence, explicit acceptance targets and resource constraints, and evaluation of satisfaction, efficiency, adaptation, and consistency across eight selector systems.">
+  <meta name="description" content="AgentSelectionBench evaluates capability–objective alignment in agent selection: native execution evidence, explicit acceptance targets and resource constraints, and evaluation of satisfaction, efficiency, adaptation, and consistency across eight selector systems.">
   <link rel="canonical" href="https://chansl-lucky.github.io/agent-selection-benchmark/">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Benchmarking Agent Selection under Heterogeneous Objectives">
+  <meta property="og:title" content="AgentSelectionBench: Who Should Execute? Evaluating Capability–Objective Alignment">
   <meta property="og:description" content="Eight selectors. Nine task families. Execution-grounded evaluation of objective satisfaction, cost efficiency, adaptation, and consistency.">
-  <title>Benchmarking Agent Selection under Heterogeneous Objectives</title>
+  <title>AgentSelectionBench: Who Should Execute? Evaluating Capability–Objective Alignment</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="academic.css">
@@ -19,16 +19,16 @@
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
-    <a class="brand" href="./">Agent Selection Benchmark</a>
+    <a class="brand" href="./">AgentSelectionBench</a>
     <nav aria-label="Main navigation"><a href="#framework">Benchmark</a><a href="#results">Results</a><a href="#analysis">Analysis</a><a href="research.html">Research Question</a><a href="gallery.html">Gallery</a></nav>
     <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
   </header>
   <main id="main">
     <section class="hero" id="top" aria-labelledby="hero-title">
-      <h1 id="hero-title">Benchmarking Agent Selection<br> under Heterogeneous Objectives</h1>
+      <h1 id="hero-title">AgentSelectionBench: Who Should Execute?<br>Evaluating Capability–Objective Alignment</h1>
       <div class="resource-pills" aria-label="Project resources">
         <a class="pill" href="https://huggingface.co/datasets/PeterChan66/agent-selection-benchmark" target="_blank" rel="noopener"><img src="assets/huggingface.svg" alt="" width="20" height="20"> Dataset</a>
-        <a class="pill" href="assets/paper.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h8l4 4v14H6zM14 3v5h5M9 12h6M9 16h6"/></svg> Paper</a>
+        <a class="pill" href="assets/paper.pdf?v=5d1f99cc" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h8l4 4v14H6zM14 3v5h5M9 12h6M9 16h6"/></svg> Paper</a>
         <a class="pill" href="#results"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V10h4v11M10 21V3h4v18M16 21V7h4v14"/></svg> Leaderboard</a>
         <a class="pill" href="#analysis"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20h18M5 15l5-5 4 3 6-8M16 5h4v4"/></svg> Analysis</a>
         <a class="pill" href="https://github.com/Chansl-Lucky/agent-selection-benchmark" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .8a11.2 11.2 0 0 0-3.54 21.83c.56.1.77-.24.77-.54v-2.1c-3.14.68-3.8-1.33-3.8-1.33-.51-1.3-1.25-1.65-1.25-1.65-1.02-.7.08-.68.08-.68 1.13.08 1.72 1.16 1.72 1.16 1 1.71 2.62 1.22 3.26.93.1-.72.39-1.22.71-1.5-2.5-.29-5.13-1.25-5.13-5.56 0-1.23.44-2.24 1.16-3.03-.12-.28-.5-1.43.11-2.98 0 0 .95-.3 3.08 1.16a10.7 10.7 0 0 1 5.6 0c2.14-1.45 3.08-1.16 3.08-1.16.61 1.55.23 2.7.11 2.98.72.79 1.16 1.8 1.16 3.03 0 4.32-2.63 5.27-5.14 5.55.4.35.76 1.04.76 2.1v3.08c0 .3.2.65.77.54A11.2 11.2 0 0 0 12 .8Z"/></svg> Code</a>
@@ -42,13 +42,13 @@
     <section class="abstract-section" id="abstract" aria-labelledby="abstract-title">
       <div class="wrap prose">
         <h2 id="abstract-title">Abstract</h2>
-        <p>Language-model applications have expanded from generating responses to executing tasks through tools and agent harnesses. This broadens selection from choosing a model to choosing an execution configuration whose suitability depends on the required outcome and execution conditions. We introduce a benchmark for <strong>agent selection under heterogeneous objectives</strong>, connecting these specifications to verifiable execution evidence. Recorded native acceptance results and resource measurements determine which candidates qualify and how economically they do so.</p>
+        <p>Language-model applications have expanded from generating responses to executing tasks through tools and agent harnesses. This broadens selection from choosing a model to choosing an execution configuration whose suitability depends on the required outcome and execution conditions. We introduce AgentSelectionBench, a benchmark for <strong>agent selection under heterogeneous objectives</strong>, connecting these specifications to verifiable execution evidence. Recorded native acceptance results and resource measurements determine which candidates qualify and how economically they do so.</p>
         <p>The benchmark organizes <strong>1,116 source tasks</strong> from <strong>nine task families</strong> into <strong>1,180 packages</strong> and <strong>22,240 constrained scenarios</strong>, with historical evidence separated from target outcomes. It evaluates objective satisfaction and cost efficiency, and uses relations between qualifying candidate sets to assess adaptation across conditions. Across eight recorded selector systems, satisfaction and efficiency yield different rankings. Condition-specific choices improve satisfaction by <strong>0.71–14.60 percentage points</strong> over reusing unconstrained choices, yet the best selector fully covers only <strong>nine of 114 target groups</strong> requiring candidate changes across feasible conditions. These results identify a gap between benefiting from execution conditions in aggregate and selecting appropriately throughout their variation, extending agent selection evaluation beyond an overall performance ranking.</p>
       </div>
     </section>
     <section class="framework-section" id="framework" aria-labelledby="framework-title">
       <div class="wrap">
-        <div class="section-heading"><h2 id="framework-title">The Agent Selection Benchmark</h2></div>
+        <div class="section-heading"><h2 id="framework-title">The Benchmark</h2></div>
         <div class="benchmark-description prose">
           <p>The benchmark evaluates the choice of an executable model–harness configuration for a specified outcome, budget, and time limit. Each package brings together a task, candidate configurations, and historical evidence from other tasks. Native acceptance verdicts and recorded resource use establish which choices satisfy each objective.</p>
           <p>A 4 × 4 budget–time grid creates 16 related conditions per acceptance target. This allows us to measure satisfaction and cost efficiency, then examine whether choices adapt when necessary and preserve success as constraints relax. <a href="research.html">Research question and formulation →</a></p>
@@ -56,11 +56,11 @@
       </div>
       <div class="figure-sequence">
         <figure class="framework-figure overview-figure" aria-labelledby="framework-caption">
-          <button class="image-zoom" data-image="assets/framework.svg" data-pdf="assets/framework.pdf" data-title="Benchmark framework" aria-label="Enlarge the benchmark framework">
-            <img src="assets/framework.svg" alt="Benchmark workflow from recorded native executions to objective-conditioned task packages, public selector inputs, private reference sets, and evaluation of satisfaction, efficiency, and cross-objective consistency." width="2400" height="1725" loading="lazy">
+          <button class="image-zoom" data-image="assets/framework.svg?v=3531a34d" data-pdf="assets/framework.pdf?v=3531a34d" data-title="Benchmark framework" aria-label="Enlarge the benchmark framework">
+            <img src="assets/framework.svg?v=3531a34d" alt="Benchmark workflow from recorded native executions to objective-conditioned task packages, public selector inputs, private reference sets, and evaluation of satisfaction, efficiency, and cross-objective consistency." width="2400" height="1725" loading="lazy">
             <span>Enlarge ↗</span>
           </button>
-          <figcaption id="framework-caption"><strong>Figure 1. Benchmark framework.</strong> Recorded native outcomes and resource measurements become related selection scenarios. The selector receives task context, objectives, candidate descriptions, and other-task history; private execution records determine objective satisfaction and cost efficiency. <a href="research.html#scoring">Scoring definitions →</a></figcaption>
+          <figcaption id="framework-caption"><strong>Figure 1. Overview of AgentSelectionBench.</strong> Recorded native outcomes and resource measurements become related selection scenarios. The selector receives task context, objectives, candidate descriptions, and other-task history; private execution records determine objective satisfaction and cost efficiency. <a href="research.html#scoring">Scoring definitions →</a></figcaption>
         </figure>
         <figure class="framework-figure overview-figure" id="case-study" aria-labelledby="case-study-caption">
           <button class="image-zoom" data-image="assets/case_study.svg" data-pdf="assets/case_study.pdf" data-title="Django deadline-relaxation case study" aria-label="Enlarge the Django case study">
@@ -90,7 +90,7 @@
     </section>
     <section class="protocol-section" id="protocol" aria-labelledby="protocol-title"><div class="wrap"><div class="section-heading"><div><h2 id="protocol-title">Evaluation Protocol</h2></div><p class="section-intro">Every selector faces the same objectives and reference choices, with target executions held private.</p></div><div class="protocol-grid"><div class="fold-card"><h3>Five folds, grouped by source task</h3><div class="folds" aria-label="Four historical folds and one target fold"><span>01<small>History</small></span><span>02<small>History</small></span><span>03<small>History</small></span><span>04<small>History</small></span><span>05<small>Target</small></span></div><p>All configurations, steps, and views of a source task remain in one fold. History comes from the other four folds within the same benchmark and track. Budget and time limits use historical percentiles 25, 50, 75, and 95, yielding a 4 × 4 condition grid for each acceptance target.</p></div><div class="protocol-details"><details open><summary>What does the evaluated selector do?</summary><p>Given task context, an objective specification, candidate descriptions, and permitted history, it submits one candidate ID for each scenario. The eight selector systems make these decisions; the candidate execution agents are the model–harness configurations already evaluated in the native task environments.</p></details><details><summary>What historical evidence is provided?</summary><p>The recorded suite uses file-access and compact direct-input interfaces. Compact inputs contain candidate outcome and resource summaries, plus up to two related cases retrieved with BM25 from public task text. Current-task outcomes and resources are excluded from selector-visible history.</p></details><details><summary>How are the ground-truth reference sets constructed?</summary><p>For objective r = (g, B, D), the satisfactory set F contains candidates that pass native target g with cost ≤ B and duration ≤ D. Its minimum-cost subset O admits ties. These sets come from recorded execution facts, not a new LLM judge, and are shared across all selectors.</p></details><details><summary>What is held fixed across related scenarios?</summary><p>A task–target group retains its context, native target, candidate identities, and execution facts while cost and time limits vary. SciCode also supports full-task and saved-output targets from shared source tasks. These relations make adaptation and constraint-relaxation consistency directly testable.</p></details><details><summary>How are all-fail scenarios and unconstrained baselines handled?</summary><p>Of 22,240 main scenarios per selector, 11,589 have at least one satisfactory candidate and 10,651 have none. All-fail scenarios remain in Q and its oracle with zero credit, and are excluded from E and H. The 1,454 unconstrained reference choices are retained separately and do not enter Q.</p></details><details><summary>What exactly is being compared in the adaptation analysis?</summary><p>Reference-set intersections determine whether one candidate can remain satisfactory or minimum-cost across conditions. The unconstrained replay comparison and relaxation checks reuse recorded submissions and existing execution facts. They are analyses of realized choices, not additional independent trials or controlled prompt interventions.</p></details></div></div></div></section>
   </main>
-  <dialog id="image-dialog" class="image-dialog" aria-label="Enlarged figure"><button class="dialog-close" aria-label="Close figure">×</button><div class="zoom-toolbar"><span id="zoom-title">Benchmark framework</span><a href="assets/framework.pdf" target="_blank" rel="noopener">Open PDF ↗</a></div><div class="image-dialog-scroll"><img src="assets/framework.svg" alt="Enlarged benchmark framework"></div></dialog>
+  <dialog id="image-dialog" class="image-dialog" aria-label="Enlarged figure"><button class="dialog-close" aria-label="Close figure">×</button><div class="zoom-toolbar"><span id="zoom-title">Benchmark framework</span><a href="assets/framework.pdf?v=3531a34d" target="_blank" rel="noopener">Open PDF ↗</a></div><div class="image-dialog-scroll"><img src="assets/framework.svg?v=3531a34d" alt="Enlarged benchmark framework"></div></dialog>
   <div id="data-error" class="data-error" role="alert" hidden>Unable to load the data. Open this page through the project's HTTP server, or refresh to try again.</div>
 </body>
 </html>

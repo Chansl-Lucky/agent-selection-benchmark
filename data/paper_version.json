@@ -1,9 +1,11 @@
 {
-  "title": "Benchmarking Agent Selection under Heterogeneous Objectives",
-  "revision": "progressive_agent_selection_narrative_20261111",
+  "title": "AgentSelectionBench: Who Should Execute? Evaluating Capability–Objective Alignment",
+  "benchmark_name": "AgentSelectionBench",
+  "revision": "latest_framework_and_django_case_20261111",
   "scores_version": "complete_eight_model_cohort_20261110",
-  "pdf_sha256": "0b33cd62e7da102fceb4c1d4293292dbc8f2ed82270de47cbeaaf576540e2e35",
+  "pdf_sha256": "5d1f99cccb82cd6b04b4014a7e299e9d50e5f220edd498a49533ba17137f4c0d",
+  "pages": 18,
   "models": 8,
   "selector_package_records": 9440,
-  "release_checked_at_utc": "2026-11-11T08:56:51.137410+00:00"
+  "release_checked_at_utc": "2026-11-11T18:17:04.825819+00:00"
 }

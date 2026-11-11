@@ -1,4 +1,4 @@
-# Benchmarking Agent Selection under Heterogeneous Objectives
+# AgentSelectionBench: Who Should Execute? Evaluating Capability–Objective Alignment
 
 **[Project website](https://chansl-lucky.github.io/agent-selection-benchmark/)** · **[Leaderboard](https://chansl-lucky.github.io/agent-selection-benchmark/#results)** · **[Behavioral analysis](https://chansl-lucky.github.io/agent-selection-benchmark/#analysis)** · **[Dataset](https://huggingface.co/datasets/PeterChan66/agent-selection-benchmark)** · **[Gallery](https://chansl-lucky.github.io/agent-selection-benchmark/gallery.html)** · **[Research question](https://chansl-lucky.github.io/agent-selection-benchmark/research.html)**
 

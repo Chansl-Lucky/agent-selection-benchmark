@@ -1,24 +1,24 @@
 {
-  "revision": "framework_and_case_study_20261112",
+  "revision": "latest_framework_and_django_case_20261111",
   "figures": {
     "framework": {
-      "title": "Benchmark construction and evaluation",
-      "source": "research/framework_redraw_20261111_rsi_details/framework_en_paper.pdf",
-      "source_sha256": "0c36b377184f3a55b15e896667045c83538a4834936bcbe6f88e9cfb6041e836",
+      "title": "Overview of AgentSelectionBench",
+      "source": "paper_refine_20261108_v1/figures/requirement_construction.pdf",
+      "source_sha256": "3531a34d475f6e00ce6d44c1a941d1ef5cbc762c3adb9c05357b69003fd90150",
       "web_svg": "PDF conversion with glyph outlines to preserve figure fonts",
       "dimensions": {
         "width": 2400,
         "height": 1725
       },
       "files": {
-        "svg": "c5919f534cff3ff5e368483d5a6ae0802a9d23670d0c3295da9b7649aa51f9f3",
-        "pdf": "0c36b377184f3a55b15e896667045c83538a4834936bcbe6f88e9cfb6041e836",
-        "png": "eb93c845a577befcd291979eda58c6dee4872cc0c76700c7b5c9a062c418e23d"
+        "svg": "da831fcb30859a20ed451e1973cee88789abd9ca98f6b20a81aefa7e5c890529",
+        "pdf": "3531a34d475f6e00ce6d44c1a941d1ef5cbc762c3adb9c05357b69003fd90150",
+        "png": "e4c69f6433229acbabf1320961d437f9525ede7e9a69b2bfcfa88a4c3516f2e1"
       }
     },
     "case_study": {
       "title": "GLM-5.3 deadline-relaxation case on django__django-11790",
-      "source": "research/case_study_20261111_rsi/case_study_en_paper.pdf",
+      "source": "paper_refine_20261108_v1/figures/django_case.pdf",
       "source_sha256": "230f69ce4bbda14d1f6c12c4c631300f5eeebab91520227e5b5e213d79de223b",
       "web_svg": "PDF conversion with glyph outlines to preserve figure fonts",
       "dimensions": {

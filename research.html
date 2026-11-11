@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Research Question — Agent Selection Benchmark</title>
+  <title>Research Question — AgentSelectionBench</title>
   <meta name="description" content="Research question, formalization, and evaluation of agent selection under heterogeneous objectives.">
   <link rel="canonical" href="https://chansl-lucky.github.io/agent-selection-benchmark/research.html">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
@@ -12,7 +12,7 @@
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
-    <a class="brand" href="./">Agent Selection Benchmark</a>
+    <a class="brand" href="./">AgentSelectionBench</a>
     <nav aria-label="Main navigation"><a href="./#framework">Benchmark</a><a href="./#results">Results</a><a href="./#analysis">Analysis</a><a href="research.html" aria-current="page">Research Question</a><a href="gallery.html">Gallery</a></nav>
     <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
   </header>
@@ -29,7 +29,7 @@
       <p class="equation"><strong>F(r)</strong> = { candidates that pass g, with cost ≤ B and duration ≤ D }</p>
       <p>The satisfactory set <strong>F</strong> contains every observed candidate that fulfills the objective. Its minimum-cost subset <strong>O</strong> includes all equally economical satisfactory candidates. These sets are calculated from native verdicts and resource records; they do not require a new language-model judge.</p>
       <p>The selector receives task context, candidate descriptions, the objective specification, and history from other source tasks. The current task’s outcome and resource records remain private to the evaluator. Source-task grouping keeps all configurations, steps, and views of one task in the same fold.</p>
-      <figure><img src="assets/framework.svg" width="2400" height="1725" alt="Objective formulation, native execution evidence, public selection packages, and private reference sets used to score selections."><figcaption>Construction of related selection problems from recorded native executions. Historical records provide selection evidence and calibrate resource limits; target records establish correctness.</figcaption></figure>
+      <figure><img src="assets/framework.svg?v=3531a34d" width="2400" height="1725" alt="Objective formulation, native execution evidence, public selection packages, and private reference sets used to score selections."><figcaption>Construction of related selection problems from recorded native executions. Historical records provide selection evidence and calibrate resource limits; target records establish correctness.</figcaption></figure>
       <h2>Three complementary evaluation questions</h2>
       <h3>1. Does the selected configuration fulfill the objective?</h3>
       <p><strong>Objective satisfaction Q</strong> measures membership in F. <strong>Cost efficiency E</strong> compares the cost of a satisfactory selection with the least expensive satisfactory execution. A native pass beyond a required resource limit is not a satisfactory selection. When both alternatives qualify, lower execution cost receives greater efficiency credit.</p>
@@ -51,6 +51,6 @@
       <p class="section-links"><a href="./#results">Experimental results →</a><a href="./#analysis">Adaptation and consistency analysis →</a><a href="gallery.html">Task gallery →</a></p>
     </article>
   </main>
-  <footer class="site-footer wrap"><div><a href="./" class="footer-brand">Agent Selection Benchmark</a><p>Benchmark data, evaluation protocol, and recorded results.</p></div><div class="footer-meta"><a href="assets/paper.pdf">Read the paper ↗</a><a href="https://github.com/Chansl-Lucky/agent-selection-benchmark">Code ↗</a></div></footer>
+  <footer class="site-footer wrap"><div><a href="./" class="footer-brand">AgentSelectionBench</a><p>Benchmark data, evaluation protocol, and recorded results.</p></div><div class="footer-meta"><a href="assets/paper.pdf?v=5d1f99cc">Read the paper ↗</a><a href="https://github.com/Chansl-Lucky/agent-selection-benchmark">Code ↗</a></div></footer>
 </body>
 </html>
