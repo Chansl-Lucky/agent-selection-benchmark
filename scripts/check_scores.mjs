@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Offline consistency audit for the current public eight-selector score snapshot.
+// Offline consistency audit for the current public nine-selector score snapshot.
 // Run from any directory: node project_site/scripts/check_scores.mjs
 // Reads only exported data and scoring.js; writes review/scoring_audit.json.
 import assert from 'node:assert/strict';
@@ -41,18 +41,19 @@ try {
     `data:text/javascript;base64,${Buffer.from(moduleText).toString('base64')}`
   );
   const expected = {benchmark_count: 9, source_tasks: 1116, task_packs: 1180,
-    main_cases: 22240, feasible_cases: 11589, all_fail_cases: 10651, formal_models: 8};
+    main_cases: 22240, feasible_cases: 11589, all_fail_cases: 10651, formal_models: 9};
 
   check('fixed_snapshot_totals_and_unique_rows', () => {
-    assert.equal(benchmark.meta.version, 'complete_eight_model_cohort_20261110');
+    assert.equal(benchmark.meta.version, 'nine_selectors_laya_20261125');
+    assert.equal(benchmark.meta.base_api_version, 'complete_eight_model_cohort_20261110');
     for (const [key, value] of Object.entries(expected)) assert.equal(benchmark.meta[key], value, key);
-    assert.equal(benchmark.models.length, 8);
+    assert.equal(benchmark.models.length, 9);
     assert.equal(benchmark.benchmarks.length, 9);
-    assert.equal(benchmark.scores.length, 80);
-    assert.equal(new Set(benchmark.models.map(x => x.id)).size, 8);
+    assert.equal(benchmark.scores.length, 90);
+    assert.equal(new Set(benchmark.models.map(x => x.id)).size, 9);
     assert.equal(new Set(benchmark.benchmarks.map(x => x.id)).size, 9);
     const keys = benchmark.scores.map(x => `${x.model}/${x.benchmark}`);
-    assert.equal(new Set(keys).size, 80, 'duplicate model/benchmark rows');
+    assert.equal(new Set(keys).size, 90, 'duplicate model/benchmark rows');
     for (const model of benchmark.models) for (const id of ['ALL', ...benchmark.benchmarks.map(x => x.id)]) {
       assert.ok(keys.includes(`${model.id}/${id}`), `missing ${model.id}/${id}`);
     }
@@ -62,11 +63,23 @@ try {
     assert.equal(expected.feasible_cases + expected.all_fail_cases, expected.main_cases);
     assert.equal(benchmark.meta.partial_models_in_main_ranking, false);
     assert.equal(benchmark.meta.common_task_cohort, true);
-    assert.equal(benchmark.meta.recorded_selector_packages, 9440);
-    assert.equal(benchmark.meta.valid_submissions, 9266);
+    assert.equal(benchmark.meta.recorded_selector_packages, 10620);
+    assert.equal(benchmark.meta.valid_submissions, 10446);
     assert.equal(benchmark.meta.invalid_submissions, 174);
     assert.equal(benchmark.scores.filter(r => r.benchmark === 'ALL').reduce((s, r) => s + r.invalid_submissions, 0), 174);
-    return {...expected, summary_rows: 80};
+    return {...expected, summary_rows: 90};
+  });
+
+  check('latest_laya_reference_score_and_display_name', () => {
+    const model = benchmark.models.find(m => m.id === 'laya');
+    assert.equal(model.name, 'Laya');
+    const row = benchmark.scores.find(r => r.model === 'laya' && r.benchmark === 'ALL');
+    close(row.q, 0.24427217850417005, 'Laya source Q');
+    close(row.e, 0.3358534258627963, 'Laya source E');
+    assert.equal(row.valid_submissions, 1180);
+    assert.equal(row.invalid_submissions, 0);
+    assert.equal(row.feasible_cases, 11589);
+    return {q: row.q, e: row.e, packages: row.task_packs};
   });
 
   check('score_ranges_denominators_and_oracle', () => {
@@ -101,7 +114,7 @@ try {
         assert.equal(overall[count], parts.reduce((sum, r) => sum + r[count], 0), `${model.id}.${count}`);
       }
     }
-    return {models_checked: 8, q_and_oracle: 'pack weighted across benchmarks', e: 'feasible-case weighted'};
+    return {models_checked: 9, q_and_oracle: 'pack weighted across benchmarks', e: 'feasible-case weighted'};
   });
 
   check('all_96_scenarios_and_null_efficiency_for_all_fail', () => {
@@ -155,7 +168,8 @@ try {
   });
 
   check('paper_diagnostics_match_formal_scores', () => {
-    assert.equal(analysis.meta.version, benchmark.meta.version);
+    assert.equal(analysis.meta.version, benchmark.meta.base_api_version);
+    assert.equal(analysis.meta.conditions_version, benchmark.meta.version);
     assert.equal(analysis.model_diagnostics.length, 8);
     for (const row of analysis.model_diagnostics) {
       const overall = benchmark.scores.find(r => r.model === row.model && r.benchmark === 'ALL');
@@ -200,8 +214,8 @@ try {
 
   check('condition_means_and_pack_weighted_totals_recover_main_q', () => {
     const rows = analysis.conditions;
-    assert.equal(rows.length, 720);
-    assert.equal(new Set(rows.map(r => `${r.benchmark}/${r.model}/${r.axis}/${r.quantile_percent}`)).size, 720);
+    assert.equal(rows.length, 800);
+    assert.equal(new Set(rows.map(r => `${r.benchmark}/${r.model}/${r.axis}/${r.quantile_percent}`)).size, 800);
     for (const axis of ['budget', 'deadline']) for (const model of [...benchmark.models.map(m => m.id), 'observed_pool_oracle']) {
       for (const bid of ['ALL', ...benchmark.benchmarks.map(b => b.id)]) {
         const parts = rows.filter(r => r.axis === axis && r.model === model && r.benchmark === bid);
@@ -218,7 +232,7 @@ try {
         assert.equal(total.targets, 1390);
       }
     }
-    return {condition_rows: 720, axes: 2, models_including_oracle: 9};
+    return {condition_rows: 800, axes: 2, models_including_oracle: 10};
   });
 } catch (error) {
   report.checks.push({name: 'load_inputs_and_scoring_module', status: 'fail', error: error.message});

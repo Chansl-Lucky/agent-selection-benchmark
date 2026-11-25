@@ -1,5 +1,5 @@
 {
-  "version": "three_row_gallery_20261111",
+  "version": "nine_selectors_laya_20261125",
   "files": [
     "index.html",
     "dataset.html",
@@ -56,6 +56,11 @@
     "assets/fonts/noto-sans.css",
     "assets/fonts/sources.json",
     "gallery-strip.js",
-    "gallery-strip.css"
+    "gallery-strip.css",
+    "assets/case_study.svg",
+    "assets/case_study.pdf",
+    "assets/case_study.png",
+    "data/figure_version.json",
+    "data/laya_release.json"
   ]
 }

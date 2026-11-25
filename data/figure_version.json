@@ -31,5 +31,26 @@
         "png": "eb7ff9519f486144ec97b0dcf440192902167ab5bd8b8149d0a1037d14721ea6"
       }
     }
+  },
+  "main_results_revision": "nine_selectors_laya_20261125",
+  "main_result_figures": {
+    "selector_comparison": {
+      "source": "data/benchmark.json",
+      "renderer": "scripts/build_main_result_figures.py",
+      "models": 9,
+      "files": {
+        "svg": "0007bd9fe8174947cdc6d7c06d0a3d51ef3a4f92f918669a0dadbf8a46bb2f18",
+        "pdf": "35ae77e394e9a99a8424d13d27b5df33df1aab99ee73c29468046a29d76a51e7"
+      }
+    },
+    "budget_conditions": {
+      "source": "data/analysis.json:conditions",
+      "renderer": "scripts/build_main_result_figures.py",
+      "models": 9,
+      "files": {
+        "svg": "a6bf18d0f8d5b3b6295e8a043e401eaae06afdcfa965c0720245e6882b0b0d94",
+        "pdf": "246e15c0c105f942a59a3bc2514c3caa54cb99f95c8ea422063fa8c1aaac5d48"
+      }
+    }
   }
 }

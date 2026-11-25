@@ -1,0 +1,110 @@
+{
+  "version": "nine_selectors_laya_20261125",
+  "date": "2026-11-25",
+  "model": "laya",
+  "display_name": "Laya",
+  "source_model": "Laya-421M-external-large-pool-SFT",
+  "checkpoint_sha256": "58734c4a8dc4774c3bf329eb815ef0eeebaae266407339a7fe0bdf6287fe17ae",
+  "training": {
+    "base": "Laya-421M",
+    "external_train_tasks": 161,
+    "external_dev_tasks": 41,
+    "train_scenarios": 2576,
+    "dev_scenarios": 656,
+    "epochs": 1,
+    "updates": 322,
+    "board_target_outcomes_used_for_training": false,
+    "board_usage": "Repeatedly consulted evaluation board; not a fresh untouched test set."
+  },
+  "evaluation": {
+    "task_packs": 1180,
+    "valid_submissions": 1180,
+    "source_tasks": 1116,
+    "constrained_scenarios": 22240,
+    "feasible_scenarios": 11589,
+    "q": 0.24427217850417005,
+    "e": 0.3358534258627963,
+    "input_protocol": "Frozen per-question inputs and candidate ordering; native selection head."
+  },
+  "api_results": {
+    "models": 8,
+    "reused_unchanged": true,
+    "version": "complete_eight_model_cohort_20261110"
+  },
+  "website_scope": "Main Q/E results, per-benchmark tables, and budget/deadline Q curves only.",
+  "paper_includes_laya": false,
+  "sources": {
+    "research/laya_external_routing/mixed_external/large_pool_dataset/sft_v1/board/score_audit.json": {
+      "sha256": "dba1157c4908b0069f121b3aa87d82b30c23df418414e34f23195f85029d7974",
+      "bytes": 10978
+    },
+    "research/laya_external_routing/mixed_external/large_pool_dataset/sft_v1/board/by_benchmark.csv": {
+      "sha256": "1cee28bcdc24b9626605afad6d895c5f6fc3ea13a8a2733851a12b4b82e0379d",
+      "bytes": 1682
+    },
+    "research/laya_external_routing/mixed_external/large_pool_dataset/sft_v1/board/comparison.csv": {
+      "sha256": "10c304b6fbbf71950045ba66ec6899cba882f63cd49b8913458d00d8d28d89d8",
+      "bytes": 886
+    },
+    "research/laya_external_routing/mixed_external/large_pool_dataset/sft_v1/board/per_package.csv": {
+      "sha256": "787b7111de49cc2271c80ac17bcdbd6b405b7c15d47329496683958640b19496",
+      "bytes": 144467
+    },
+    "research/laya_external_routing/mixed_external/large_pool_dataset/sft_v1/fit/complete.json": {
+      "sha256": "7b455ad12634f795b5765649792ed35f6691419804123118bd0cefff85a4402a",
+      "bytes": 2090
+    },
+    "research/laya_external_routing/mixed_external/large_pool_dataset/sft_v1/dev/dev_metrics.json": {
+      "sha256": "8166e37d445cdc8dd491495bd07405fd12b946f86bb3bf466a98a7ae13c20fbd",
+      "bytes": 8955
+    },
+    "research/laya_external_routing/mixed_external/large_pool_dataset/sft_v1/dev/heldout_input_audit.json": {
+      "sha256": "c8214d39745f8ff41ec6d5bd821b6b6b7ef9529241995e08dfe20a7eb97fffc1",
+      "bytes": 398
+    },
+    "research/laya_external_routing/mixed_external/large_pool_dataset/sft_v1/board/fold0/laya_scored_cases.jsonl": {
+      "sha256": "6275c32157c9cf7268e87a6059cf8b9d53f6cf322f357694a8a585777a80be21",
+      "bytes": 1969631
+    },
+    "research/laya_external_routing/mixed_external/large_pool_dataset/sft_v1/board/fold0/score_audit.json": {
+      "sha256": "7e19cfb263fb60a58b96fbfb4e805f94cf8021dac3fca16572813b1f3f093d85",
+      "bytes": 1117
+    },
+    "research/laya_external_routing/mixed_external/large_pool_dataset/sft_v1/board/fold1/laya_scored_cases.jsonl": {
+      "sha256": "60507c8f1a43d4a083ad12d3b598b08097e8dba40452e46bd2c9c9d0cb9dd852",
+      "bytes": 1828091
+    },
+    "research/laya_external_routing/mixed_external/large_pool_dataset/sft_v1/board/fold1/score_audit.json": {
+      "sha256": "a07d7edd5e67451f2d1b026ce2375b818ca932f33321c1df23527e84468e216f",
+      "bytes": 1118
+    },
+    "research/laya_external_routing/mixed_external/large_pool_dataset/sft_v1/board/fold2/laya_scored_cases.jsonl": {
+      "sha256": "47d6a42517a2fd96add80ba459f25099502e25cc6deb28fa192672da1700de3a",
+      "bytes": 1821450
+    },
+    "research/laya_external_routing/mixed_external/large_pool_dataset/sft_v1/board/fold2/score_audit.json": {
+      "sha256": "b028f169ca31ca46945f5dd652c1c6227133a0e61b2e82f3ef061f9f5060ac7d",
+      "bytes": 1117
+    },
+    "research/laya_external_routing/mixed_external/large_pool_dataset/sft_v1/board/fold3/laya_scored_cases.jsonl": {
+      "sha256": "bed0ee8e32fca1e455f9548638f87293de769bb9561062a0bad4345bdac40cc3",
+      "bytes": 1837410
+    },
+    "research/laya_external_routing/mixed_external/large_pool_dataset/sft_v1/board/fold3/score_audit.json": {
+      "sha256": "a2387c2212a76ae13fcaaf54ad1950711250a007ef9ca56fda1d1c7b9cfd9328",
+      "bytes": 1117
+    },
+    "research/laya_external_routing/mixed_external/large_pool_dataset/sft_v1/board/fold4/laya_scored_cases.jsonl": {
+      "sha256": "b3b7c92aa87e955b0049401767770de6144737a82d6b5fdaa5f91296d7712d6f",
+      "bytes": 1901057
+    },
+    "research/laya_external_routing/mixed_external/large_pool_dataset/sft_v1/board/fold4/score_audit.json": {
+      "sha256": "40762cbcafa1f3c03ca004771db37c89bb4dd847b2e0c30256e505865e694a0c",
+      "bytes": 1119
+    },
+    "research/laya_api_hard_cases_20261122/full_sft_fold0/score_fold0.py": {
+      "sha256": "cd84ca621eac3680c7c5c2d28035035efe6907f20ac1a590ce5db8ace6644c74",
+      "bytes": 9915
+    }
+  }
+}

@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "snapshot": "complete_eight_model_cohort_20261110",
-  "generated_date": "2026-11-11",
+  "snapshot": "nine_selectors_laya_20261125",
+  "generated_date": "2026-11-25",
   "source_paths_relative_to_repository": true,
   "results_sha256": "8ee5c8612ce59dc7feb291e293333c4b87fcc44121ec2e0638c466aea1f38c96",
   "export_policy": {
@@ -200,16 +200,97 @@
     "paper_refine_20261108_v1/figures/django_case.pdf": {
       "sha256": "230f69ce4bbda14d1f6c12c4c631300f5eeebab91520227e5b5e213d79de223b",
       "bytes": 89229
+    },
+    "research/laya_external_routing/mixed_external/large_pool_dataset/sft_v1/board/score_audit.json": {
+      "sha256": "dba1157c4908b0069f121b3aa87d82b30c23df418414e34f23195f85029d7974",
+      "bytes": 10978
+    },
+    "research/laya_external_routing/mixed_external/large_pool_dataset/sft_v1/board/by_benchmark.csv": {
+      "sha256": "1cee28bcdc24b9626605afad6d895c5f6fc3ea13a8a2733851a12b4b82e0379d",
+      "bytes": 1682
+    },
+    "research/laya_external_routing/mixed_external/large_pool_dataset/sft_v1/board/comparison.csv": {
+      "sha256": "10c304b6fbbf71950045ba66ec6899cba882f63cd49b8913458d00d8d28d89d8",
+      "bytes": 886
+    },
+    "research/laya_external_routing/mixed_external/large_pool_dataset/sft_v1/board/per_package.csv": {
+      "sha256": "787b7111de49cc2271c80ac17bcdbd6b405b7c15d47329496683958640b19496",
+      "bytes": 144467
+    },
+    "research/laya_external_routing/mixed_external/large_pool_dataset/sft_v1/fit/complete.json": {
+      "sha256": "7b455ad12634f795b5765649792ed35f6691419804123118bd0cefff85a4402a",
+      "bytes": 2090
+    },
+    "research/laya_external_routing/mixed_external/large_pool_dataset/sft_v1/dev/dev_metrics.json": {
+      "sha256": "8166e37d445cdc8dd491495bd07405fd12b946f86bb3bf466a98a7ae13c20fbd",
+      "bytes": 8955
+    },
+    "research/laya_external_routing/mixed_external/large_pool_dataset/sft_v1/dev/heldout_input_audit.json": {
+      "sha256": "c8214d39745f8ff41ec6d5bd821b6b6b7ef9529241995e08dfe20a7eb97fffc1",
+      "bytes": 398
+    },
+    "research/laya_external_routing/mixed_external/large_pool_dataset/sft_v1/board/fold0/laya_scored_cases.jsonl": {
+      "sha256": "6275c32157c9cf7268e87a6059cf8b9d53f6cf322f357694a8a585777a80be21",
+      "bytes": 1969631
+    },
+    "research/laya_external_routing/mixed_external/large_pool_dataset/sft_v1/board/fold0/score_audit.json": {
+      "sha256": "7e19cfb263fb60a58b96fbfb4e805f94cf8021dac3fca16572813b1f3f093d85",
+      "bytes": 1117
+    },
+    "research/laya_external_routing/mixed_external/large_pool_dataset/sft_v1/board/fold1/laya_scored_cases.jsonl": {
+      "sha256": "60507c8f1a43d4a083ad12d3b598b08097e8dba40452e46bd2c9c9d0cb9dd852",
+      "bytes": 1828091
+    },
+    "research/laya_external_routing/mixed_external/large_pool_dataset/sft_v1/board/fold1/score_audit.json": {
+      "sha256": "a07d7edd5e67451f2d1b026ce2375b818ca932f33321c1df23527e84468e216f",
+      "bytes": 1118
+    },
+    "research/laya_external_routing/mixed_external/large_pool_dataset/sft_v1/board/fold2/laya_scored_cases.jsonl": {
+      "sha256": "47d6a42517a2fd96add80ba459f25099502e25cc6deb28fa192672da1700de3a",
+      "bytes": 1821450
+    },
+    "research/laya_external_routing/mixed_external/large_pool_dataset/sft_v1/board/fold2/score_audit.json": {
+      "sha256": "b028f169ca31ca46945f5dd652c1c6227133a0e61b2e82f3ef061f9f5060ac7d",
+      "bytes": 1117
+    },
+    "research/laya_external_routing/mixed_external/large_pool_dataset/sft_v1/board/fold3/laya_scored_cases.jsonl": {
+      "sha256": "bed0ee8e32fca1e455f9548638f87293de769bb9561062a0bad4345bdac40cc3",
+      "bytes": 1837410
+    },
+    "research/laya_external_routing/mixed_external/large_pool_dataset/sft_v1/board/fold3/score_audit.json": {
+      "sha256": "a2387c2212a76ae13fcaaf54ad1950711250a007ef9ca56fda1d1c7b9cfd9328",
+      "bytes": 1117
+    },
+    "research/laya_external_routing/mixed_external/large_pool_dataset/sft_v1/board/fold4/laya_scored_cases.jsonl": {
+      "sha256": "b3b7c92aa87e955b0049401767770de6144737a82d6b5fdaa5f91296d7712d6f",
+      "bytes": 1901057
+    },
+    "research/laya_external_routing/mixed_external/large_pool_dataset/sft_v1/board/fold4/score_audit.json": {
+      "sha256": "40762cbcafa1f3c03ca004771db37c89bb4dd847b2e0c30256e505865e694a0c",
+      "bytes": 1119
+    },
+    "research/laya_api_hard_cases_20261122/full_sft_fold0/score_fold0.py": {
+      "sha256": "cd84ca621eac3680c7c5c2d28035035efe6907f20ac1a590ce5db8ace6644c74",
+      "bytes": 9915
     }
   },
   "checks": {
-    "formal_models": 8,
-    "score_records": 80,
-    "selector_package_records": 9440,
+    "formal_models": 9,
+    "score_records": 90,
+    "selector_package_records": 10620,
     "benchmark_count": 9,
     "gallery_examples": 18,
     "scicode_reference_native_verifier": "passed; zero=21/96, tools=4/96, oracle=22/96",
     "scicode_history_folds_disjoint": true,
-    "new_api_calls": 0
+    "new_api_calls": 0,
+    "laya_valid_packages": 1180,
+    "laya_source_scores_verified": true,
+    "original_eight_api_rows_unchanged": true
+  },
+  "base_api_snapshot": "complete_eight_model_cohort_20261110",
+  "laya_release": {
+    "file": "data/laya_release.json",
+    "source_model": "Laya-421M-external-large-pool-SFT",
+    "checkpoint_sha256": "58734c4a8dc4774c3bf329eb815ef0eeebaae266407339a7fe0bdf6287fe17ae"
   }
 }
