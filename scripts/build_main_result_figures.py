@@ -40,7 +40,7 @@ SHORT_MODELS = {'gpt-6.1-sol': 'GPT', 'claude-sonnet-5-5': 'Claude',
                 'gemini-3.8-flash': 'Gemini', 'qwen3-vl-plus': 'Qwen',
                 'glm-5.3': 'GLM', 'deepseek-v4.1-flash': 'DeepSeek',
                 'kimi-k3.1-pro': 'Kimi', 'doubao-seed-2.1-pro': 'Doubao',
-                'laya': 'Laya'}
+                'laya': 'Laya-S1'}
 MARKERS = ['o', 's', '^', 'v', 'P', 'D', 'X', '*', 'p']
 INK = '#183C40'
 ORACLE = 'observed_pool_oracle'
@@ -221,7 +221,7 @@ def main():
     benchmark = json.loads(benchmark_path.read_text())
     analysis = json.loads(analysis_path.read_text())
     models = benchmark['models']
-    assert len(models) == 9 and models[-1]['id'] == 'laya' and models[-1]['name'] == 'Laya'
+    assert len(models) == 9 and models[-1]['id'] == 'laya' and models[-1]['name'] == 'Laya-S1'
     assert len({m['id'] for m in models}) == 9
     scores = {(r['model'], r['benchmark']): r for r in benchmark['scores']}
     assert len(scores) == 90 and len(analysis['conditions']) == 800

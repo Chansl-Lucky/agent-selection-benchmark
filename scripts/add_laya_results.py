@@ -126,7 +126,7 @@ def main():
                           'main_cases': int(row['constrained_cases']), 'feasible_cases': feasible,
                           'all_fail_cases': int(row['all_fail_cases']), 'feasible_hit_rate': h, 'h': h,
                           'c': e / h if h else None})
-    benchmark['models'] = old_models + [{'id': MODEL, 'name': 'Laya', 'color': '#BA4D13'}]
+    benchmark['models'] = old_models + [{'id': MODEL, 'name': 'Laya-S1', 'selector_type': 'learned', 'color': '#BA4D13'}]
     benchmark['scores'] = old_scores + additions
     benchmark['meta'].update(version=VERSION, base_api_version=BASE_VERSION, results_date=DATE,
                              export_date=DATE, formal_models=9, recorded_selector_packages=10620,
@@ -161,16 +161,17 @@ def main():
     analysis['meta']['conditions_version'] = VERSION
 
     fields, wide = csv_rows(DATA / 'complete_scores.csv')
-    fields = [x for x in fields if x not in ('Laya_Q', 'Laya_E')]
+    fields = [x for x in fields if x not in ('Laya_Q', 'Laya_E', 'Laya-S1_Q', 'Laya-S1_E')]
     old_wide = [{k: v for k, v in row.items() if k in fields} for row in wide]
     names = {b['name']: b['id'] for b in benchmark['benchmarks']}
     names['All benchmarks'] = 'ALL'
     for row in wide:
         score = summaries[names[row['Benchmark']]]
-        row.update(Laya_Q=display_percent(score['Q']), Laya_E=display_percent(score['E']))
+        row.pop('Laya_Q', None); row.pop('Laya_E', None)
+        row.update({'Laya-S1_Q': display_percent(score['Q']), 'Laya-S1_E': display_percent(score['E'])})
     assert [{k: row[k] for k in fields} for row in wide] == old_wide
 
-    csv_outputs = {'complete_scores.csv': csv_text(fields + ['Laya_Q', 'Laya_E'], wide)}
+    csv_outputs = {'complete_scores.csv': csv_text(fields + ['Laya-S1_Q', 'Laya-S1_E'], wide)}
     def long_row(name):
         selected = {tid: rows for tid, rows in packs.items() if name == 'ALL' or rows[0]['benchmark'] == name}
         rows = [r for group in selected.values() for r in group]
@@ -209,7 +210,7 @@ def main():
     scorer = ROOT / 'research/laya_api_hard_cases_20261122/full_sft_fold0/score_fold0.py'
     sources.append(scorer)
     provenance = {str(p.relative_to(ROOT)): {'sha256': digest(p), 'bytes': p.stat().st_size} for p in sources}
-    release = {'version': VERSION, 'date': DATE, 'model': MODEL, 'display_name': 'Laya',
+    release = {'version': VERSION, 'date': DATE, 'model': MODEL, 'display_name': 'Laya-S1', 'selector_type': 'learned',
                'source_model': SOURCE_MODEL, 'checkpoint_sha256': audit['weight_sha256'],
                'training': {'base': 'Laya-421M', 'external_train_tasks': 161, 'external_dev_tasks': 41,
                             'train_scenarios': 2576, 'dev_scenarios': 656, 'epochs': 1, 'updates': 322,

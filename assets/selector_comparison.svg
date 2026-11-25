@@ -1336,8 +1336,8 @@ z
     <g id="xtick_9">
      <g id="line2d_9"/>
      <g id="text_9">
-      <!-- Laya -->
-      <g style="fill: #ba4d13" transform="translate(383.810641 128.913991) scale(0.075 -0.075)">
+      <!-- Laya-S1 -->
+      <g style="fill: #ba4d13" transform="translate(378.601656 128.913991) scale(0.075 -0.075)">
        <defs>
         <path id="LiberationSerif-Bold-5c" d="M 1444 -91
 L 269 2656
@@ -1368,11 +1368,35 @@ Q 1163 -706 1234 -551
 Q 1306 -397 1444 -91
 z
 " transform="scale(0.015625)"/>
+        <path id="LiberationSerif-Bold-10" d="M 234 1234
+L 234 1778
+L 1897 1778
+L 1897 1234
+L 234 1234
+z
+" transform="scale(0.015625)"/>
+        <path id="LiberationSerif-Bold-14" d="M 2141 344
+L 2869 269
+L 2869 0
+L 513 0
+L 513 269
+L 1238 344
+L 1238 3503
+L 516 3266
+L 516 3531
+L 1697 4225
+L 2141 4225
+L 2141 344
+z
+" transform="scale(0.015625)"/>
        </defs>
        <use xlink:href="#LiberationSerif-Bold-2f"/>
        <use xlink:href="#LiberationSerif-Bold-44" transform="translate(66.703125 0)"/>
        <use xlink:href="#LiberationSerif-Bold-5c" transform="translate(116.703125 0)"/>
        <use xlink:href="#LiberationSerif-Bold-44" transform="translate(166.703125 0)"/>
+       <use xlink:href="#LiberationSerif-Bold-10" transform="translate(216.703125 0)"/>
+       <use xlink:href="#LiberationSerif-Bold-36" transform="translate(250 0)"/>
+       <use xlink:href="#LiberationSerif-Bold-14" transform="translate(305.609375 0)"/>
       </g>
      </g>
     </g>
@@ -1782,15 +1806,6 @@ z
      <g id="text_16">
       <!-- SWE-mini -->
       <g style="fill: #183c40" transform="translate(39.346503 98.873802) scale(0.075 -0.075)">
-       <defs>
-        <path id="LiberationSerif-Bold-10" d="M 234 1234
-L 234 1778
-L 1897 1778
-L 1897 1234
-L 234 1234
-z
-" transform="scale(0.015625)"/>
-       </defs>
        <use xlink:href="#LiberationSerif-Bold-36"/>
        <use xlink:href="#LiberationSerif-Bold-3a" transform="translate(55.609375 0)"/>
        <use xlink:href="#LiberationSerif-Bold-28" transform="translate(155.609375 0)"/>
@@ -2092,22 +2107,6 @@ z
    <g id="text_24">
     <!-- 5.1 -->
     <g style="fill: #183c40" transform="translate(276.131398 41.450819) scale(0.075 -0.075)">
-     <defs>
-      <path id="LiberationSerif-Bold-14" d="M 2141 344
-L 2869 269
-L 2869 0
-L 513 0
-L 513 269
-L 1238 344
-L 1238 3503
-L 516 3266
-L 516 3531
-L 1697 4225
-L 2141 4225
-L 2141 344
-z
-" transform="scale(0.015625)"/>
-     </defs>
      <use xlink:href="#LiberationSerif-Bold-18"/>
      <use xlink:href="#LiberationSerif-Bold-11" transform="translate(50 0)"/>
      <use xlink:href="#LiberationSerif-Bold-14" transform="translate(75 0)"/>
@@ -3550,12 +3549,15 @@ z
     <g id="xtick_18">
      <g id="line2d_27"/>
      <g id="text_108">
-      <!-- Laya -->
-      <g style="fill: #ba4d13" transform="translate(383.810641 258.712417) scale(0.075 -0.075)">
+      <!-- Laya-S1 -->
+      <g style="fill: #ba4d13" transform="translate(378.601656 258.712417) scale(0.075 -0.075)">
        <use xlink:href="#LiberationSerif-Bold-2f"/>
        <use xlink:href="#LiberationSerif-Bold-44" transform="translate(66.703125 0)"/>
        <use xlink:href="#LiberationSerif-Bold-5c" transform="translate(116.703125 0)"/>
        <use xlink:href="#LiberationSerif-Bold-44" transform="translate(166.703125 0)"/>
+       <use xlink:href="#LiberationSerif-Bold-10" transform="translate(216.703125 0)"/>
+       <use xlink:href="#LiberationSerif-Bold-36" transform="translate(250 0)"/>
+       <use xlink:href="#LiberationSerif-Bold-14" transform="translate(305.609375 0)"/>
       </g>
      </g>
     </g>

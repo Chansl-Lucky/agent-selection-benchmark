@@ -5161,7 +5161,7 @@ z
     </g>
    </g>
    <g id="text_99">
-    <!-- Laya -->
+    <!-- Laya-S1 -->
     <g style="fill: #183c40" transform="translate(311.949047 10.239921) scale(0.075 -0.075)">
      <defs>
       <path id="LiberationSerif-Bold-5c" d="M 1444 -91
@@ -5198,6 +5198,9 @@ z
      <use xlink:href="#LiberationSerif-Bold-44" transform="translate(66.703125 0)"/>
      <use xlink:href="#LiberationSerif-Bold-5c" transform="translate(116.703125 0)"/>
      <use xlink:href="#LiberationSerif-Bold-44" transform="translate(166.703125 0)"/>
+     <use xlink:href="#LiberationSerif-Bold-10" transform="translate(216.703125 0)"/>
+     <use xlink:href="#LiberationSerif-Bold-36" transform="translate(250 0)"/>
+     <use xlink:href="#LiberationSerif-Bold-14" transform="translate(305.609375 0)"/>
     </g>
    </g>
    <g id="line2d_258">

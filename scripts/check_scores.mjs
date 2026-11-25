@@ -72,7 +72,7 @@ try {
 
   check('latest_laya_reference_score_and_display_name', () => {
     const model = benchmark.models.find(m => m.id === 'laya');
-    assert.equal(model.name, 'Laya');
+    assert.equal(model.name, 'Laya-S1');
     const row = benchmark.scores.find(r => r.model === 'laya' && r.benchmark === 'ALL');
     close(row.q, 0.24427217850417005, 'Laya source Q');
     close(row.e, 0.3358534258627963, 'Laya source E');

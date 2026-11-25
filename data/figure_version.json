@@ -39,18 +39,20 @@
       "renderer": "scripts/build_main_result_figures.py",
       "models": 9,
       "files": {
-        "svg": "0007bd9fe8174947cdc6d7c06d0a3d51ef3a4f92f918669a0dadbf8a46bb2f18",
-        "pdf": "35ae77e394e9a99a8424d13d27b5df33df1aab99ee73c29468046a29d76a51e7"
-      }
+        "svg": "b1d286aa7cf479455ed9b9b7ec296a2a2be47e1268355ea89bbc1a9e82d5f31a",
+        "pdf": "fd27aef6e0b0d6819a9319468002e14bf8c6fae6f380b6dc01528a3d6211d4c7"
+      },
+      "learned_selector": "Laya-S1"
     },
     "budget_conditions": {
       "source": "data/analysis.json:conditions",
       "renderer": "scripts/build_main_result_figures.py",
       "models": 9,
       "files": {
-        "svg": "a6bf18d0f8d5b3b6295e8a043e401eaae06afdcfa965c0720245e6882b0b0d94",
-        "pdf": "246e15c0c105f942a59a3bc2514c3caa54cb99f95c8ea422063fa8c1aaac5d48"
-      }
+        "svg": "b7b835e2d62ba5cbc9dbf825ba5a0a3a39973afb47b4c1cf01ee9a97db15ad4c",
+        "pdf": "ea3b8100c51b3f7df67dbcd335122b2484738d50ae481519496cfa8e16fd0ba9"
+      },
+      "learned_selector": "Laya-S1"
     }
   }
 }

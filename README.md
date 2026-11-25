@@ -8,7 +8,7 @@ This repository hosts the English project website, manuscript, result visualizat
 
 Agent selection must account for acceptance targets and execution conditions that vary within the same task context. Recorded native verdicts, costs, and durations define the satisfactory and minimum-cost candidate sets for each objective. These reference sets support evaluation of objective satisfaction, cost efficiency, necessary adaptation, and consistency under relaxed constraints.
 
-The November 25, 2026 website results cover **9 task families, 1,116 source tasks, 1,180 packages, 22,240 constrained scenarios, and 9 selector systems**, including Laya. All nine systems use the same fixed evaluation cohort; invalid or missing submissions receive zero. Source tasks are split before constructing historical evidence.
+The November 25, 2026 website results cover **9 task families, 1,116 source tasks, 1,180 packages, 22,240 constrained scenarios, and 9 selector systems**, including Laya-S1. All nine systems use the same fixed evaluation cohort; invalid or missing submissions receive zero. Source tasks are split before constructing historical evidence.
 
 - **Q:** average scenario satisfaction within each package, then across packages.
 - **E:** minimum feasible execution cost divided by the selected feasible cost; unsuccessful selections score zero. Aggregate over feasible scenarios only.
@@ -16,7 +16,7 @@ The November 25, 2026 website results cover **9 task families, 1,116 source task
 - **Adaptation:** scenario-specific choices versus reuse of each selector's unconstrained choice, plus full coverage in groups that require switching.
 - **Consistency:** avoidable failures after a constraint is relaxed, witnessed by a previously satisfactory choice.
 
-The main results include **Laya**, a 421M-parameter selector fine-tuned on 161 external training tasks with 41 external validation tasks. It achieves **Q = 24.43 and E = 33.59** (0–100 scale) on all 1,180 packages, ranking second in execution-cost efficiency among nine systems. E measures selected-agent execution efficiency, not selector inference cost or latency.
+The main results include **Laya-S1**, a 421M-parameter selector fine-tuned on 161 external training tasks with 41 external validation tasks. It achieves **Q = 24.43 and E = 33.59** (0–100 scale) on all 1,180 packages, ranking second in execution-cost efficiency among nine systems. E measures selected-agent execution efficiency, not selector inference cost or latency.
 
 The website uses the name **RouterArenaBench**. The downloadable paper PDF retains its earlier AgentSelectionBench title and original eight-API snapshot. The adaptation/consistency analysis also retains that eight-API snapshot.
 
@@ -32,7 +32,7 @@ The leaderboard describes recorded selector systems, including their evidence-ac
 - `scoring.js`: deterministic scoring for the SciCode 66 demonstration.
 - `data/benchmark.json`: nine-selector overall and per-family scores.
 - `data/analysis.json`: nine-selector resource-condition curves and the paper’s eight-API adaptation, switching, and consistency analyses.
-- `data/laya_release.json`: provenance for the current Laya result; trained on 161 external tasks with 41 external validation tasks, then evaluated on all 1,180 benchmark packages.
+- `data/laya_release.json`: provenance for the current Laya-S1 result; trained on 161 external tasks with 41 external validation tasks, then evaluated on all 1,180 benchmark packages.
 - `data/*.csv`: downloadable tables.
 - `assets/paper.pdf`: current manuscript; this is not an arXiv publication link.
 - `assets/*.svg` and `assets/*.pdf`: current paper figures.
@@ -55,7 +55,7 @@ node scripts/check_scores.mjs
 python3 scripts/build_static.py
 ```
 
-The static builder creates a clean `dist/` from `publish_manifest.json`. `scripts/add_laya_results.py` appends the current Laya result from its archived scores, and `scripts/build_main_result_figures.py` renders the updated main figures from exported JSON. `scripts/export_data.py` is a reproducibility utility for the original research workspace and requires its archived inputs; viewing the published site does not require them.
+The static builder creates a clean `dist/` from `publish_manifest.json`. `scripts/add_laya_results.py` appends the current Laya-S1 result from its archived scores, and `scripts/build_main_result_figures.py` renders the updated main figures from exported JSON. `scripts/export_data.py` is a reproducibility utility for the original research workspace and requires its archived inputs; viewing the published site does not require them.
 
 GitHub Pages serves the root of the **`gh-pages`** branch. The **`main`** branch retains the site source and validation utilities. The runtime uses no credentials or analytics.
 

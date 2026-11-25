@@ -1,4 +1,4 @@
-Benchmark,Task_packs,Oracle_Q,GPT-6.1_Q,GPT-6.1_E,Claude-5.5_Q,Claude-5.5_E,Gemini-3.8_Q,Gemini-3.8_E,Qwen3-VL_Q,Qwen3-VL_E,GLM-5.3_Q,GLM-5.3_E,DeepSeek-v4.1_Q,DeepSeek-v4.1_E,Kimi-K3.1_Q,Kimi-K3.1_E,Doubao-2.1_Q,Doubao-2.1_E,Laya_Q,Laya_E
+Benchmark,Task_packs,Oracle_Q,GPT-6.1_Q,GPT-6.1_E,Claude-5.5_Q,Claude-5.5_E,Gemini-3.8_Q,Gemini-3.8_E,Qwen3-VL_Q,Qwen3-VL_E,GLM-5.3_Q,GLM-5.3_E,DeepSeek-v4.1_Q,DeepSeek-v4.1_E,Kimi-K3.1_Q,Kimi-K3.1_E,Doubao-2.1_Q,Doubao-2.1_E,Laya-S1_Q,Laya-S1_E
 AssistantBench,33,11.17,6.44,46.19,3.22,23.92,4.55,28.59,0.0,0.0,5.49,42.49,5.11,27.2,3.79,27.23,2.65,17.9,2.27,14.40
 CORE-Bench,45,61.81,12.22,3.86,10.14,4.46,10.14,4.49,10.42,3.85,3.75,2.01,8.61,4.28,11.39,10.3,9.58,3.63,7.50,5.11
 GAIA,164,88.95,45.31,18.27,37.88,17.51,42.38,13.45,29.19,27.11,38.15,23.47,37.31,17.07,36.39,19.43,37.16,21.08,33.16,19.52

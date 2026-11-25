@@ -75,8 +75,9 @@
     },
     {
       "id": "laya",
-      "name": "Laya",
-      "color": "#BA4D13"
+      "name": "Laya-S1",
+      "color": "#BA4D13",
+      "selector_type": "learned"
     }
   ],
   "benchmarks": [

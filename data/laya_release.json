@@ -2,7 +2,7 @@
   "version": "nine_selectors_laya_20261125",
   "date": "2026-11-25",
   "model": "laya",
-  "display_name": "Laya",
+  "display_name": "Laya-S1",
   "source_model": "Laya-421M-external-large-pool-SFT",
   "checkpoint_sha256": "58734c4a8dc4774c3bf329eb815ef0eeebaae266407339a7fe0bdf6287fe17ae",
   "training": {
@@ -106,5 +106,6 @@
       "sha256": "cd84ca621eac3680c7c5c2d28035035efe6907f20ac1a590ce5db8ace6644c74",
       "bytes": 9915
     }
-  }
+  },
+  "selector_type": "learned"
 }

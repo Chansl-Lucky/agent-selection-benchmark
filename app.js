@@ -60,7 +60,7 @@ function renderResults() {
   $('#result-pack-count').textContent=number(best.task_packs);
   $('#table-metric-label').textContent=`${metricLabel} · 0–100 scale`;
   const table=$('#results-table');
-  $('thead',table).innerHTML=`<tr><th scope="col">Benchmark</th>${benchmark.models.map(m=>`<th scope="col">${escapeHTML(m.name)}</th>`).join('')}${metric==='q'?'<th scope="col">Oracle Q</th>':''}</tr>`;
+  $('thead',table).innerHTML=`<tr><th scope="col">Benchmark</th>${benchmark.models.map(m=>`<th scope="col">${escapeHTML(m.name)}<span class="selector-kind">${m.selector_type==='learned'?'Learned selector':'API agent'}</span></th>`).join('')}${metric==='q'?'<th scope="col">Oracle Q</th>':''}</tr>`;
   $('tbody',table).innerHTML=[...benchmark.benchmarks,{id:'ALL',name:'Overall · official aggregation',task_packs:benchmark.meta.task_packs}].map(b=>{
     const rows=benchmark.models.map(m=>benchmark.scores.find(s=>s.model===m.id&&s.benchmark===b.id));const max=Math.max(...rows.map(s=>s[metric]));
     return `<tr><td>${escapeHTML(b.name)}<span class="table-pack">${number(b.task_packs)} task packs</span></td>${rows.map(s=>`<td class="${s[metric]===max?'best':''}">${pct(s[metric])}</td>`).join('')}${metric==='q'?`<td>${pct(rows[0].oracle)}</td>`:''}</tr>`;
@@ -76,7 +76,7 @@ function renderAnalysis() {
 
 async function loadData() {
   try {
-    const response=await Promise.all(['benchmark','analysis','gallery'].map(async name=>{const r=await fetch(`data/${name}.json?v=laya-20261125`);if(!r.ok)throw new Error(`${name}: ${r.status}`);return r.json();}));
+    const response=await Promise.all(['benchmark','analysis','gallery'].map(async name=>{const r=await fetch(`data/${name}.json?v=laya-s1-20261125`);if(!r.ok)throw new Error(`${name}: ${r.status}`);return r.json();}));
     [benchmark,analysis]=response;
     renderGalleryStrips($('#home-gallery-strips'),response[2].examples);
     initializeResults();renderAnalysis();
