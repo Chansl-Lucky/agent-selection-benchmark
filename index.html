@@ -4,12 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#ffffff">
-  <meta name="description" content="AgentSelectionBench evaluates capability–objective alignment in agent selection: native execution evidence, explicit acceptance targets and resource constraints, and evaluation of satisfaction, efficiency, adaptation, and consistency, with main results for nine selector systems.">
+  <meta name="description" content="RouterArenaBench evaluates capability–objective alignment in agent selection: native execution evidence, explicit acceptance targets and resource constraints, and evaluation of satisfaction, efficiency, adaptation, and consistency, with main results for nine selector systems.">
   <link rel="canonical" href="https://chansl-lucky.github.io/agent-selection-benchmark/">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="AgentSelectionBench: Who Should Execute? Evaluating Capability–Objective Alignment">
+  <meta property="og:title" content="RouterArenaBench: Who Should Execute? Evaluating Capability–Objective Alignment">
   <meta property="og:description" content="Nine selectors. Nine task families. Execution-grounded evaluation of objective satisfaction, cost efficiency, adaptation, and consistency.">
-  <title>AgentSelectionBench: Who Should Execute? Evaluating Capability–Objective Alignment</title>
+  <title>RouterArenaBench: Who Should Execute? Evaluating Capability–Objective Alignment</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="academic.css">
@@ -19,13 +19,13 @@
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
-    <a class="brand" href="./">AgentSelectionBench</a>
+    <a class="brand" href="./">RouterArenaBench</a>
     <nav aria-label="Main navigation"><a href="#framework">Benchmark</a><a href="#results">Results</a><a href="#analysis">Analysis</a><a href="research.html">Research Question</a><a href="gallery.html">Gallery</a></nav>
     <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
   </header>
   <main id="main">
     <section class="hero" id="top" aria-labelledby="hero-title">
-      <h1 id="hero-title">AgentSelectionBench: Who Should Execute?<br>Evaluating Capability–Objective Alignment</h1>
+      <h1 id="hero-title">RouterArenaBench: Who Should Execute?<br>Evaluating Capability–Objective Alignment</h1>
       <div class="resource-pills" aria-label="Project resources">
         <a class="pill" href="https://huggingface.co/datasets/PeterChan66/agent-selection-benchmark" target="_blank" rel="noopener"><img src="assets/huggingface.svg" alt="" width="20" height="20"> Dataset</a>
         <a class="pill" href="assets/paper.pdf?v=5d1f99cc" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h8l4 4v14H6zM14 3v5h5M9 12h6M9 16h6"/></svg> Paper</a>
@@ -42,16 +42,17 @@
     <section class="abstract-section" id="abstract" aria-labelledby="abstract-title">
       <div class="wrap prose">
         <h2 id="abstract-title">Abstract</h2>
-        <p>Language-model applications have expanded from generating responses to executing tasks through tools and agent harnesses. This broadens selection from choosing a model to choosing an execution configuration whose suitability depends on the required outcome and execution conditions. We introduce AgentSelectionBench, a benchmark for <strong>agent selection under heterogeneous objectives</strong>, connecting these specifications to verifiable execution evidence. Recorded native acceptance results and resource measurements determine which candidates qualify and how economically they do so.</p>
-        <p>The benchmark organizes <strong>1,116 source tasks</strong> from <strong>nine task families</strong> into <strong>1,180 packages</strong> and <strong>22,240 constrained scenarios</strong>, with historical evidence separated from target outcomes. It evaluates objective satisfaction and cost efficiency, and uses relations between qualifying candidate sets to assess adaptation across conditions. Across the eight API selector systems reported in the paper, satisfaction and efficiency yield different rankings. Condition-specific choices improve satisfaction by <strong>0.71–14.60 percentage points</strong> over reusing unconstrained choices, yet the best selector fully covers only <strong>nine of 114 target groups</strong> requiring candidate changes across feasible conditions. These results identify a gap between benefiting from execution conditions in aggregate and selecting appropriately throughout their variation, extending agent selection evaluation beyond an overall performance ranking.</p>
+        <p>As language-model applications move from generating responses to executing tasks, choosing an agent requires matching a model–harness configuration to a required outcome, budget, and time limit. We introduce <strong>RouterArenaBench</strong>, a benchmark for <strong>agent selection under heterogeneous objectives</strong>. It organizes <strong>1,116 source tasks</strong> from <strong>nine task families</strong> into <strong>1,180 packages</strong> and <strong>22,240 constrained scenarios</strong>. Native acceptance verdicts and recorded resource use establish objective-specific reference sets; other-task history informs selection while target outcomes remain private. The benchmark measures satisfaction and execution-cost efficiency, alongside adaptation and consistency as requirements change.</p>
+        <p>Among the eight API selectors analyzed in the paper, condition-specific choices improve satisfaction by <strong>0.71–14.60 percentage points</strong> over reusing unconstrained choices, yet the best selector fully covers only <strong>nine of 114 target groups</strong> requiring candidate changes. Aggregate gains therefore leave substantial gaps in adaptation across conditions. We also fine-tune <strong>Laya, a 421M-parameter selector</strong>, on external tasks. On all 1,180 packages, it achieves <strong>Q = 24.43</strong> and <strong>E = 33.59</strong> on the 0–100 scale, ranking <strong>second in execution-cost efficiency among nine selectors</strong>. These results establish a compact learned baseline for selecting agents under explicit execution requirements.</p>
       </div>
     </section>
     <section class="framework-section" id="framework" aria-labelledby="framework-title">
       <div class="wrap">
-        <div class="section-heading"><h2 id="framework-title">The Benchmark</h2></div>
-        <div class="benchmark-description prose">
-          <p>The benchmark evaluates the choice of an executable model–harness configuration for a specified outcome, budget, and time limit. Each package brings together a task, candidate configurations, and historical evidence from other tasks. Native acceptance verdicts and recorded resource use establish which choices satisfy each objective.</p>
-          <p>A 4 × 4 budget–time grid creates 16 related conditions per acceptance target. This allows us to measure satisfaction and cost efficiency, then examine whether choices adapt when necessary and preserve success as constraints relax. <a href="research.html">Research question and formulation →</a></p>
+        <div class="section-heading"><h2 id="framework-title">Contributions</h2></div>
+        <div class="benchmark-description prose" id="contributions">
+          <p><strong>Execution-grounded selection tasks.</strong> We turn archived native evaluations into reusable routing packages with task context, candidate configurations, and other-task history. A 4 × 4 budget–time grid creates 16 related scenarios per acceptance target, each with qualifying candidates determined by recorded outcomes and resources.</p>
+          <p><strong>Evaluation across changing objectives.</strong> Deterministic reference sets support satisfaction and execution-cost efficiency scores, and reveal whether selectors change configurations when necessary or lose attainable success as constraints relax. This measures behavior that an overall ranking alone cannot capture. <a href="research.html">Research question and formulation →</a></p>
+          <p><strong>A compact, high-efficiency selector.</strong> Fine-tuned on 161 external training tasks, <strong>Laya</strong> uses 421M parameters and reaches <strong>Q = 24.43 and E = 33.59</strong> across all 1,180 packages. Its execution-cost efficiency ranks <strong>second among nine selectors</strong>, exceeding seven of the eight API baselines and providing a competitive learned reference for the benchmark.</p>
         </div>
       </div>
       <div class="figure-sequence">
@@ -60,7 +61,7 @@
             <img src="assets/framework.svg?v=3531a34d" alt="Benchmark workflow from recorded native executions to objective-conditioned task packages, public selector inputs, private reference sets, and evaluation of satisfaction, efficiency, and cross-objective consistency." width="2400" height="1725" loading="lazy">
             <span>Enlarge ↗</span>
           </button>
-          <figcaption id="framework-caption"><strong>Figure 1. Overview of AgentSelectionBench.</strong> Recorded native outcomes and resource measurements become related selection scenarios. The selector receives task context, objectives, candidate descriptions, and other-task history; private execution records determine objective satisfaction and cost efficiency. <a href="research.html#scoring">Scoring definitions →</a></figcaption>
+          <figcaption id="framework-caption"><strong>Figure 1. Overview of RouterArenaBench.</strong> Recorded native outcomes and resource measurements become related selection scenarios. The selector receives task context, objectives, candidate descriptions, and other-task history; private execution records determine objective satisfaction and cost efficiency. <a href="research.html#scoring">Scoring definitions →</a></figcaption>
         </figure>
         <figure class="framework-figure overview-figure" id="case-study" aria-labelledby="case-study-caption">
           <button class="image-zoom" data-image="assets/case_study.svg" data-pdf="assets/case_study.pdf" data-title="Django deadline-relaxation case study" aria-label="Enlarge the Django case study">

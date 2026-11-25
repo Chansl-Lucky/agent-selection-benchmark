@@ -1,4 +1,4 @@
-# AgentSelectionBench: Who Should Execute? Evaluating Capability–Objective Alignment
+# RouterArenaBench: Who Should Execute? Evaluating Capability–Objective Alignment
 
 **[Project website](https://chansl-lucky.github.io/agent-selection-benchmark/)** · **[Leaderboard](https://chansl-lucky.github.io/agent-selection-benchmark/#results)** · **[Behavioral analysis](https://chansl-lucky.github.io/agent-selection-benchmark/#analysis)** · **[Dataset](https://huggingface.co/datasets/PeterChan66/agent-selection-benchmark)** · **[Gallery](https://chansl-lucky.github.io/agent-selection-benchmark/gallery.html)** · **[Research question](https://chansl-lucky.github.io/agent-selection-benchmark/research.html)**
 
@@ -16,7 +16,9 @@ The November 25, 2026 website results cover **9 task families, 1,116 source task
 - **Adaptation:** scenario-specific choices versus reuse of each selector's unconstrained choice, plus full coverage in groups that require switching.
 - **Consistency:** avoidable failures after a constraint is relaxed, witnessed by a previously satisfactory choice.
 
-The main results include the latest Laya run. The paper PDF and adaptation/consistency analysis retain the original eight-API snapshot.
+The main results include **Laya**, a 421M-parameter selector fine-tuned on 161 external training tasks with 41 external validation tasks. It achieves **Q = 24.43 and E = 33.59** (0–100 scale) on all 1,180 packages, ranking second in execution-cost efficiency among nine systems. E measures selected-agent execution efficiency, not selector inference cost or latency.
+
+The website uses the name **RouterArenaBench**. The downloadable paper PDF retains its earlier AgentSelectionBench title and original eight-API snapshot. The adaptation/consistency analysis also retains that eight-API snapshot.
 
 The leaderboard describes recorded selector systems, including their evidence-access and recovery protocols, rather than an identical-input model-only comparison. Original task executions are not rerun by this website.
 
